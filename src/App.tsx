@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className=''>Arduino Day</h1>
+      <h1 className='text-center font-semibold uppercase text-9xl text-3'>Arduino Day</h1>
     </div>
   )
 }
