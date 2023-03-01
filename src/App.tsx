@@ -1,11 +1,27 @@
 import './App.css'
+import About from './components/About'
+import Agenda from './components/Agenda'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import NavBar from './components/NavBar'
+import Speakers from './components/Speakers'
+import Sponsors from './components/Sponsors'
+import Swag from './components/Swag'
+import Teams from './components/Teams'
 
 function App() {
 
   return (
     <div className="App">
-      <h1 className='text-center font-semibold uppercase text-9xl text-3'>Arduino Day</h1>
-      <img src="/1.png" alt="" />
+      <NavBar />
+      <Hero />
+      <About />
+      <Agenda />
+      <Speakers />
+      <Sponsors />
+      <Swag />
+      <Teams />
+      <Footer />
     </div>
   )
 }
