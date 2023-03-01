@@ -15,6 +15,10 @@ module.exports = {
         60: "#F39C12",
         70: "#F26727",
         80: "#0E0E0E",
+      },
+
+      fontFamily: {
+        sans: "Roboto"
       }
     },
   },
