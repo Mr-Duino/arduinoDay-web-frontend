@@ -9,21 +9,25 @@ import Sponsors from './components/Sponsors'
 import Swag from './components/Swag'
 import Teams from './components/Teams'
 
+import { Route, Routes } from 'react-router-dom'
+import Register from './pages/Register'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+
 function App() {
+
 
   return (
     <div className="App">
-      <NavBar />
-      <Hero />
-      <About />
-      <Agenda />
-      <Speakers />
-      <Sponsors />
-      <Swag />
-      <Teams />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/register' element={<Register />}/>
+        <Route path='*' element={<NotFound />}/>
+  
+      </Routes>
     </div>
   )
 }
+
 
 export default App
