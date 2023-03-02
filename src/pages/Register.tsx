@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion as m } from 'framer-motion'
 
 type Props = {}
 
@@ -13,7 +14,20 @@ function Register({ }: Props) {
   return (
     <div className='px-4 md:px-10 lg:px-20'>
       <div className='grid grid-cols-1 md:grid-cols-2'>
-        <div className='flex flex-col justify-center'>
+        <m.div
+          initial={{
+            opacity: 0,
+            x: -100
+          }}
+          animate={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut'
+          }}
+          className='flex flex-col justify-center'>
           <h1 className='text-70 text-8xl font-semibold lg:text-9xl'>Why</h1>
           <br />
           <h1 className='text-30 font-semibold text-4xl -mt-3 lg:text-5xl'>Should I Register ?</h1>
@@ -22,17 +36,43 @@ function Register({ }: Props) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
 
           {/* <button className='btn-1'>Let's Register</button> */}
-        </div>
-        <div className='flex justify-center mt-7'>
+        </m.div>
+        <m.div
+          initial={{
+            opacity: 0,
+            x: 100
+          }}
+          animate={{
+            opacity: 1,
+            x: 0
+          }}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut'
+          }}
+          className='flex justify-center mt-7'>
           <img className='object-cover' src="/register-img.png" loading='lazy' alt="Registration Background Image" />
-        </div>
+        </m.div>
       </div>
 
 
 
 
 
-      <div className='mt-10 md:flex md:justify-center'>
+      <m.div
+        initial={{
+          opacity: 0,
+          x: -100
+        }}
+        animate={{
+          opacity: 1,
+          x: 0
+        }}
+        transition={{
+          duration: 1.5,
+          ease: 'easeInOut'
+        }}
+        className='mt-10 md:flex md:justify-center'>
 
         <form action="">
 
@@ -60,7 +100,7 @@ function Register({ }: Props) {
                 <div className='flex flex-row gap-5 mt-2 mb-5'>
                   <div>
                     <input
-                    className=''
+                      className=''
                       type="radio"
                       id="student-radio"
                       name="status"
@@ -241,7 +281,7 @@ function Register({ }: Props) {
           </div>
         </form>
 
-      </div>
+      </m.div>
     </div>
   )
 }
