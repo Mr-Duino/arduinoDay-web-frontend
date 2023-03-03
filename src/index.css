@@ -17,5 +17,15 @@
     }
 }
 
+.card-two {
+background:url('./public/cardImg2.png');
+background-size:cover;
+}
+
+.card-three {
+background:url('./public/cardImg3.png');
+background-size:cover;
+}
+
 
 
