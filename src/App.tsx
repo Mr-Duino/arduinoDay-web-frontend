@@ -6,12 +6,14 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import DayOneRegulations from './pages/DayOneRegulations'
 import DayTwoRegulations from './pages/DayTwoRegulations'
+import NavBar from './components/NavBar'
 
 function App() {
 
 
   return (
     <div className="App">
+      <NavBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/register' element={<Register />}/>
