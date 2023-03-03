@@ -52,6 +52,7 @@ function Hero({ }: Props) {
           <img loading='lazy' src="/hero-img.png" alt="Hero Image" />
         </m.div>
       </div>
+      {/* test comment */}
     </div>
   )
 }
