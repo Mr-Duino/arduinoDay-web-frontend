@@ -23,7 +23,7 @@ const Speakers = ({ }: Props) => {
 
         <div id="speakersGrid" className="mt-16 mb-24 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
           <div className="md:order-1 md:col-span-2">
-            <img src="./src/assets/img1.png" alt="My Image" className={style.image}/>
+            <img src="/img1.png" alt="My Image" className={style.image}/>
           </div>
           <div className="border-2 border-30 rounded-md px-6 grid place-items-center md:order-2 md:col-span-2">
             <p className={style.infoCardText}>
@@ -39,7 +39,7 @@ const Speakers = ({ }: Props) => {
             </p>
           </div>
           <div className="md:order-4 lg:order-3">
-            <img src="./src/assets/img1.png" alt="My Image" className={style.image}/>
+            <img src="/img1.png" alt="My Image" className={style.image}/>
           </div>
           <div className="border-2 border-30 rounded-md px-6 grid place-items-center md:order-3 lg:order-4">
             <p className={style.infoCardText}>
@@ -55,7 +55,7 @@ const Speakers = ({ }: Props) => {
             </p>
           </div>
           <div className="md:order-5">
-            <img src="./src/assets/img1.png" alt="My Image" className={style.image}/>
+            <img src="/img1.png" alt="My Image" className={style.image}/>
           </div>
           <div className="border-2 border-30 rounded-md px-6 grid place-items-center md:order-6">
             <p className={style.infoCardText}>
@@ -71,7 +71,7 @@ const Speakers = ({ }: Props) => {
             </p>
           </div>
           <div className="md:order-8">
-            <img src="./src/assets/img1.png" alt="My Image" className={style.image}/>
+            <img src="/img1.png" alt="My Image" className={style.image}/>
           </div>
           <div className="border-2 border-30 rounded-md px-6 grid place-items-center md:order-7">
             <p className={style.infoCardText}>
@@ -87,7 +87,7 @@ const Speakers = ({ }: Props) => {
             </p>
           </div>
           <div className="md:order-9 lg:order-10">
-            <img src="./src/assets/img1.png" alt="My Image" className={style.image}/>
+            <img src="/img1.png" alt="My Image" className={style.image}/>
           </div>
           <div className="border-2 border-30 rounded-md px-6 grid place-items-center md:order-10 lg:order-9">
             <p className={style.infoCardText}>
