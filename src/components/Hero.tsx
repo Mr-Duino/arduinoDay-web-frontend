@@ -4,7 +4,9 @@ type Props = {}
 
 function Hero({}: Props) {
   return (
-    <div>Hero</div>
+    <div>Hero
+      
+    </div>
   )
 }
 
