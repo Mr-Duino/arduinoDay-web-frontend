@@ -5,10 +5,11 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
-function Register({}: Props) {
+function Register({ }: Props) {
   const [fname, setFName] = useState(""); // Full Name
   const [email, setEmail] = useState(""); // Email
   const [uniorscl, setUniOrScl] = useState(""); // University or School
@@ -31,7 +32,7 @@ function Register({}: Props) {
   const [eduM2Name, setEduM2Name] = useState(""); //Member 2 University or School Name
   const [m2phone, setM2Phone] = useState(""); // Member 2 Phone
 
-  const [formSubmited,setFormSubmitted] = useState(false);
+  const [formSubmited, setFormSubmitted] = useState(false);
 
   const onOptionChange = (event: any) => {
     setHackthon(event.target.value);
@@ -84,14 +85,14 @@ function Register({}: Props) {
   };
 
   const style = {
-    formLableStyle: "text-30 font-medium text-xl",
+    formLableStyle: "text-30 font-medium text-md",
     formFieldStyle:
-      "border-2 border-30 rounded-md w-[100%] h-9 mt-2 md:h-12 active:border-70 focus:border-70 active:outline-none focus:outline-none text-30 font-medium px-3",
+      "border-2 bg-10/0 border-30 rounded-md w-[100%] h-9 mt-2 md:h-10 active:border-70 focus:border-70 active:outline-none focus:outline-none text-30 font-medium px-3",
   };
 
   return (
     <div className="px-4 md:px-10 lg:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 lg:px-20">
         <m.div
           initial={{
             opacity: 0,
@@ -102,18 +103,18 @@ function Register({}: Props) {
             x: 0,
           }}
           transition={{
-            duration: 1.5,
+            duration: 1,
             ease: "easeInOut",
           }}
           className="flex flex-col justify-center"
         >
-          <h1 className="text-70 text-8xl font-semibold lg:text-9xl">Why</h1>
+          <h1 className="text-70 text-8xl font-semibold">Why</h1>
           <br />
-          <h1 className="text-30 font-semibold text-4xl -mt-3 lg:text-5xl">
+          <h1 className="text-30 font-semibold text-4xl -mt-3 ">
             Should I Register ?
           </h1>
 
-          <p className="text-80 text-sm font-medium my-4 lg:text-lg">
+          <p className="text-80 text-sm font-medium my-4 ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -132,7 +133,7 @@ function Register({}: Props) {
             x: 0,
           }}
           transition={{
-            duration: 1.5,
+            duration: 1,
             ease: "easeInOut",
           }}
           className="flex justify-center mt-7"
@@ -146,6 +147,8 @@ function Register({}: Props) {
         </m.div>
       </div>
 
+
+
       <m.div
         initial={{
           opacity: 0,
@@ -156,12 +159,19 @@ function Register({}: Props) {
           x: 0,
         }}
         transition={{
-          duration: 1.5,
+          duration: 1,
           ease: "easeInOut",
         }}
-        className="mt-10 md:flex md:justify-center"
+        className="mt-20 max-w-4xl flex flex-col gap-10 mx-auto md:justify-center"
       >
-        {!formSubmited &&(
+
+        <div>
+          <h3 className="text-30 text-md font-medium"><span className="text-70 font-bold">*</span>If you are participating to the Arduino Day, please Read More about <span className="text-70 underline cursor-pointer"> <Link to={'/dayone-regulations'}>Day 1</Link></span> Rules & Regulations & Read more about <span className="text-70 underline cursor-pointer"><Link to={'/daytwo-regulations'}>Day 2</Link></span> agenda & regulations.</h3>
+        </div>
+
+        <hr />
+
+        {!formSubmited && (
           <form onSubmit={onSubmitHandler}>
             <div className="grid grid-cols-1 gap-8">
               <div>
@@ -200,7 +210,7 @@ function Register({}: Props) {
                         checked={uniorscl === "Student"}
                         onChange={(event) => onOptionChangeEdu(event)}
                       />{" "}
-                      <span className="text-30 font-medium text-xl">Student</span>
+                      <span className="text-30 font-medium text-md">Student</span>
                     </div>
                     <div>
                       <input
@@ -211,7 +221,7 @@ function Register({}: Props) {
                         checked={uniorscl === "Undergraduate"}
                         onChange={(event) => onOptionChangeEdu(event)}
                       />{" "}
-                      <span className="text-30 font-medium text-xl">
+                      <span className="text-30 font-medium text-md">
                         Undergraduate
                       </span>
                     </div>
@@ -260,7 +270,7 @@ function Register({}: Props) {
                       checked={day1}
                       onChange={(e) => setDay1(e.target.checked)}
                     />{" "}
-                    <span className="text-30 font-medium text-xl">Day 1</span>
+                    <span className="text-30 font-medium text-md">Day 1</span>
                   </div>
                   <div>
                     <input
@@ -270,7 +280,7 @@ function Register({}: Props) {
                       checked={day2}
                       onChange={(e) => setDay2(e.target.checked)}
                     />{" "}
-                    <span className="text-30 font-medium text-xl">Day 2</span>
+                    <span className="text-30 font-medium text-md">Day 2</span>
                   </div>
                 </div>
               </div>
@@ -295,7 +305,7 @@ function Register({}: Props) {
                         checked={hackthon === "Yes"}
                         onChange={(event) => onOptionChange(event)}
                       />{" "}
-                      <span className="text-30 font-medium text-xl">Yes</span>
+                      <span className="text-30 font-medium text-md">Yes</span>
                     </div>
                     <div>
                       <input
@@ -306,7 +316,7 @@ function Register({}: Props) {
                         checked={hackthon === "No"}
                         onChange={(event) => onOptionChange(event)}
                       />{" "}
-                      <span className="text-30 font-medium text-xl">No</span>
+                      <span className="text-30 font-medium text-md">No</span>
                     </div>
                   </div>
                 </div>
@@ -363,7 +373,7 @@ function Register({}: Props) {
                             checked={m1uniorscl === "Student"}
                             onChange={(event) => onOptionChangeEduM1(event)}
                           />{" "}
-                          <span className="text-30 font-medium text-xl">
+                          <span className="text-30 font-medium text-md">
                             Student
                           </span>
                         </div>
@@ -376,7 +386,7 @@ function Register({}: Props) {
                             checked={m1uniorscl === "Undergraduate"}
                             onChange={(event) => onOptionChangeEduM1(event)}
                           />{" "}
-                          <span className="text-30 font-medium text-xl">
+                          <span className="text-30 font-medium text-md">
                             Undergraduate
                           </span>
                         </div>
@@ -448,7 +458,7 @@ function Register({}: Props) {
                             checked={m2uniorscl === "Student"}
                             onChange={(event) => onOptionChangeEduM2(event)}
                           />{" "}
-                          <span className="text-30 font-medium text-xl">
+                          <span className="text-30 font-medium text-md">
                             Student
                           </span>
                         </div>
@@ -461,7 +471,7 @@ function Register({}: Props) {
                             checked={m2uniorscl === "Undergraduate"}
                             onChange={(event) => onOptionChangeEduM2(event)}
                           />{" "}
-                          <span className="text-30 font-medium text-xl">
+                          <span className="text-30 font-medium text-md">
                             Undergraduate
                           </span>
                         </div>
@@ -503,7 +513,18 @@ function Register({}: Props) {
           </form>
         )}
         {/* Add your thank you note here */}
-        {formSubmited &&(<div>Tank You!</div>)} 
+        {formSubmited && (
+          <div className="flex flex-col justify-center items-center my-10">
+            <h1 className="text-center text-4xl text-70 font-medium">Thank You !</h1>
+            <p className="text-center text-sm text-30 font-medium">Thank you for registering for the Arduino Day 2023.</p>
+            <div>
+              <Link to={'/'}>
+                <button className="btn-1 mt-10">Back To Home</button>
+              </Link>
+            </div>
+
+          </div>
+        )}
       </m.div>
     </div>
   );

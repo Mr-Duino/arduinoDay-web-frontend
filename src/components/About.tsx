@@ -1,6 +1,7 @@
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Marquee from "react-fast-marquee";
+import { Link } from 'react-router-dom';
 
 
 type Props = {}
@@ -43,11 +44,15 @@ function About({ }: Props) {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 </p>
-                <button
-                  type="button"
-                  className="btn-2 mt-5">
-                  Register Now
-                </button>
+
+                <Link to={'/register'}>
+                  <button
+                    type="button"
+                    className="btn-2 mt-5">
+                    Register Now
+                  </button>
+                </Link>
+
               </div>
             </div>
             {/* card 1 */}
@@ -56,23 +61,32 @@ function About({ }: Props) {
           <div className='flex flex-col md:flex-row gap-7'>
             {/* card-2 */}
             <div className="flex">
-              <a href='#'
+              <div
                 className="w-[100%] h-[25rem] md:w-[15rem] md:max-h-[20rem] rounded-lg border-30 border-2 px-8 pt-5 pb-9 flex justify-between card-two">
                 <h5
                   className="mb-2 text-xl font-medium text-30">
                   Hackathon <br />Challenge
                 </h5>
-                <ArrowForwardIcon className='text-30 mt-2' />
-              </a>
+                <Link to={'/dayone-regulations'}>
+                  <ArrowForwardIcon className='text-30 mt-2' />
+                </Link>
+              </div>
             </div>
             {/* card-2 */}
 
 
             {/* card-3 */}
             <div className="flex">
-              <a href='#'
-                className="w-[100%] h-[25rem] md:h-[20rem] md:w-[15rem] rounded-lg border-30 border-2 px-8 pt-10 pb-9 flex justify-between card-three">
-              </a>
+              <div
+                className="w-[100%] h-[25rem] md:h-[20rem] md:w-[15rem] rounded-lg border-30 border-2 px-8 pt-5 pb-9 flex justify-between card-three">
+                  <h5
+                  className="mb-2 text-xl font-medium text-30">
+                  Speaker <br />Session
+                </h5>
+                <Link to={'/daytwo-regulations'}>
+                  <ArrowForwardIcon className='text-30 mt-2' />
+                </Link>
+              </div>
             </div>
             {/* card-3 */}
           </div>
