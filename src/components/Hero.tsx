@@ -22,8 +22,8 @@ function Hero({ }: Props) {
             duration: 1,
             ease: 'easeInOut',
           }}
-          className='mt-5 md:flex flex-col justify-center'>
-          <h3 className='text-70 font-medium md:text-2xl'>2023 MAR 24 - 25</h3>
+          className='md:flex flex-col justify-center'>
+          <h3 className='text-70 font-medium md:text-2xl mt-10'>2023 MAR 24 - 25</h3>
           <h1 className='uppercase text-30 font-bold text-7xl md:text-8xl' >Arduino Day</h1>
 
           <Countdown targetDate={new Date('2023-03-24T00:00:00')} />

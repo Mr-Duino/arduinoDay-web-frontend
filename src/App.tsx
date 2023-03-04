@@ -7,20 +7,22 @@ import NotFound from './pages/NotFound'
 import DayOneRegulations from './pages/DayOneRegulations'
 import DayTwoRegulations from './pages/DayTwoRegulations'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
 
 
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/register' element={<Register />}/>
-        <Route path='*' element={<NotFound />}/>
-        <Route path='/dayone-regulations' element={<DayOneRegulations />}/>
-        <Route path='/daytwo-regulations' element={<DayTwoRegulations />}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='*' element={<NotFound />} />
+        <Route path='/dayone-regulations' element={<DayOneRegulations />} />
+        <Route path='/daytwo-regulations' element={<DayTwoRegulations />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
