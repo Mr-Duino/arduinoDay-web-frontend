@@ -44,7 +44,7 @@ const Nav = () => {
             </div>
           </div>
           <ul
-            className={`font-roboto text-[18px]  flex flex-col lg:flex-row gap-10 lg:gap-8 items-center  lg:py-0 py-12  absolute lg:static bg-slate-100/0  lg:bg-transparent lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 transition-all duration-500 ease-in-out ${open ? "top-20 " : "top-[-580px]"
+            className={`font-roboto text-[18px]  flex flex-col lg:flex-row gap-10 lg:gap-8 items-center  lg:py-0 py-12  absolute lg:static bg-slate-100/95  lg:bg-transparent lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 transition-all duration-500 ease-in-out ${open ? "top-20 " : "top-[-580px]"
               }`}
           >
             <li>
