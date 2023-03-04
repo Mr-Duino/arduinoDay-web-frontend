@@ -13,15 +13,15 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar />
       <Hero />
-      <About />
+      <About /> */}
       <Agenda />
-      <Speakers />
+      {/* <Speakers />
       <Sponsors />
       <Swag />
       <Teams />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }
