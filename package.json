@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
+    "@reacticons/ionicons": "^6.1.1",
     "firebase": "^9.17.1",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.4.0",
