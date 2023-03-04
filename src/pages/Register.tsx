@@ -4,8 +4,10 @@ import db from "../../utils/firebase-config";
 import {
   doc,
   setDoc,
+  getDoc 
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+
 
 type Props = {};
 
@@ -33,6 +35,7 @@ function Register({ }: Props) {
   const [m2phone, setM2Phone] = useState(""); // Member 2 Phone
 
   const [formSubmited, setFormSubmitted] = useState(false);
+  const [exists,setExists] = useState(false);
 
   const onOptionChange = (event: any) => {
     setHackthon(event.target.value);
@@ -79,9 +82,16 @@ function Register({ }: Props) {
         Phone: m2phone,
       },
     };
-    console.log(docData);
-    await setDoc(doc(db, "Arduino_Day_Registration", email), docData);
-    setFormSubmitted(true);
+    const docRef = doc(db, "Arduino_Day_Registration", email);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      setExists(true);
+    } else {
+      console.log("No such document!");
+      await setDoc(doc(db, "Arduino_Day_Registration", email), docData);
+      setFormSubmitted(true);
+    }
   };
 
   const style = {
@@ -525,6 +535,7 @@ function Register({ }: Props) {
 
           </div>
         )}
+        {exists &&(<div>You already Registed!</div>)}
       </m.div>
     </div>
   );
