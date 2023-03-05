@@ -19,7 +19,7 @@ const Home = (props: Props) => {
             <Speakers />
             <Sponsors />
             <Swag />
-            <Teams />
+            {/* <Teams /> */}
         </div>
     )
 }

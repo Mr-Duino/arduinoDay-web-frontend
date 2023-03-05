@@ -17,9 +17,13 @@
     }
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #F9F9F9;
-    overflow-x: ;
+    overflow-x: hidden;
 }
 
 .card-two {
