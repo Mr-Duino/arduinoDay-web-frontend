@@ -10,7 +10,7 @@ const Sponsors = ({}: Props) => {
 
   return (
     <div>
-      <section className="bg-white py-16">
+      <section id='sponsors' className="bg-white py-16">
         <h1 className="text-4xl font-bold text-70 text-center mx-auto uppercase">Sponsors</h1>
         <p className="text-80/60 text-center mx-auto text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="max-w-screen-xl px-4 mx-auto">

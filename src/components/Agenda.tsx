@@ -52,7 +52,7 @@ export default function BasicTabs() {
   };
 
   return (
-    <section className='p-3 justify-center flex-col md:flex md:flex-row lg:gap-[9rem]'>
+    <section id='agenda' className='mt-12 p-3 justify-center flex-col md:flex md:flex-row lg:gap-[11rem]'>
 
       <div>
         <h1 className='uppercase text-4xl font-semibold text-80 px-3'>Agenda</h1>
