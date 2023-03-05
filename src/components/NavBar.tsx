@@ -3,14 +3,16 @@ import React, { useState } from "react";
 import IonIcon from "@reacticons/ionicons";
 
 import { Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
 
   let [open, setOpen] = useState(false);
   return (
-    <div className="mb-20">
-      <div className=" w-full z-50 fixed top-0 left-0 bg-slate-100/80 backdrop-blur-[20px] py-6 lg:px-12 px-4 ">
+    <m.div
+    className="mb-28">
+      <div className=" w-full z-50 fixed top-0 left-0 bg-slate-100/80 backdrop-blur-[20px] py-6 lg:px-20 px-4 ">
         <div className=" lg:flex items-center justify-between mx-auto max-w-[1280px]">
           <div className="flex justify-between items-center ">
             <Link to={'/'}>
@@ -115,7 +117,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 

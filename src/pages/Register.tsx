@@ -4,7 +4,7 @@ import db from "../../utils/firebase-config";
 import {
   doc,
   setDoc,
-  getDoc 
+  getDoc
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
@@ -35,7 +35,7 @@ function Register({ }: Props) {
   const [m2phone, setM2Phone] = useState(""); // Member 2 Phone
 
   const [formSubmited, setFormSubmitted] = useState(false);
-  const [exists,setExists] = useState(false);
+  const [exists, setExists] = useState(false);
 
   const onOptionChange = (event: any) => {
     setHackthon(event.target.value);
@@ -101,60 +101,62 @@ function Register({ }: Props) {
   };
 
   return (
-    <div className="px-4 md:px-10 lg:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 lg:px-20">
-        <m.div
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="flex flex-col justify-center"
-        >
-          <h1 className="text-70 text-8xl font-semibold">Why</h1>
-          <br />
-          <h1 className="text-30 font-semibold text-4xl -mt-3 ">
-            Should I Register ?
-          </h1>
+    <div className="px-4 md:px-10 lg:px-20 ">
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 mt-10 max-w-[1000px]">
+          <m.div
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="flex flex-col justify-center"
+          >
+            <h1 className="text-70 text-8xl font-semibold">Why</h1>
+            <br />
+            <h1 className="text-30 font-semibold text-4xl -mt-3 ">
+              Should I Register ?
+            </h1>
 
-          <p className="text-80 text-sm font-medium my-4 ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor.
-          </p>
+            <p className="text-80 text-sm font-medium my-4 ">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor.
+            </p>
 
-          {/* <button className='btn-1'>Let's Register</button> */}
-        </m.div>
-        <m.div
-          initial={{
-            opacity: 0,
-            y: 100,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="flex justify-center mt-7"
-        >
-          <img
-            className="object-cover"
-            src="/register-img.png"
-            loading="lazy"
-            alt="Registration Background Image"
-          />
-        </m.div>
+            {/* <button className='btn-1'>Let's Register</button> */}
+          </m.div>
+          <m.div
+            initial={{
+              opacity: 0,
+              y: 100,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="flex justify-center mt-7"
+          >
+            <img
+              className="object-cover"
+              src="/register-img.png"
+              loading="lazy"
+              alt="Registration Background Image"
+            />
+          </m.div>
+        </div>
       </div>
 
 
@@ -535,7 +537,7 @@ function Register({ }: Props) {
 
           </div>
         )}
-        {exists &&(<div>You already Registed!</div>)}
+        {exists && (<div>You already Registed!</div>)}
       </m.div>
     </div>
   );

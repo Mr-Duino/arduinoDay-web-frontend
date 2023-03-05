@@ -8,7 +8,7 @@ type Props = {}
 function Hero({ }: Props) {
   return (
     <div className='m-5 flex flex-row justify-center items-center'>
-      <div className='flex flex-col md:flex-row '>
+      <div className='flex lg:gap-32 flex-col md:flex-row '>
         <m.div
           initial={{
             opacity: 0,

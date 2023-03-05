@@ -10,8 +10,8 @@ const Swag = ({ }: Props) => {
         <div className='place-items-center shrink md:w-80 lg:w-full'>
           <img src="./swagTee.png" alt="arduinoTshirt" className='' />
         </div>
-        <div className='md:flex items-center'>
-          <p className='space-y-3 text-right lg:space-y-6'>
+        <div className='md:flex items-center '>
+          <p className='space-y-3 text-left lg:space-y-6 '>
             <div className='text-5xl md:text-5xl lg:text-6xl  xl:text-[4.2rem] font-black text-80'>Grab Your</div>
             <div className='text-6xl md:text-7xl lg:text-8xl xl:text-[6.7rem] font-black text-10'>Arduino Tee</div>
             <div className="">
