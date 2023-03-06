@@ -48,19 +48,20 @@ export default function BasicTabs() {
 
   const style = {
     agendarowStyle: 'w-[100%] h-[4rem] flex justify-center items-center md:h-[3.5rem]',
-    agendaDescriptionStyle: 'font-normal text-lg text-[#000000b6]',
+    agendaDescriptionStyle: 'font-normal text-lg text-[#000000b6] lg:text-left',
+    lgDescriptionStyle: 'text-center lg:ml-0 lg:mr-auto',
   };
 
   return (
-    <section id='agenda' className='mt-12 p-3 justify-center flex-col md:flex md:flex-row lg:gap-[11rem]'>
+    <section id='agenda' className='mt-12 p-3 justify-center flex-col md:flex md:flex-col md:items-center lg:flex lg:flex-row lg:gap-[11rem]'>
 
       <div>
         <h1 className='uppercase text-4xl font-semibold text-80 px-3'>Agenda</h1>
         <p className='font-normal text-[#0e0e0e8a] px-3'>Lorem ipsum dolor sit amet consectetur </p>
-        <img src="/agendaImg.png" alt="agenda-image" className='px-3 mb-10 mt-7 md:mt-[15rem]' />
+        <img src="/agendaImg.png" alt="agenda-image" className='px-3 mb-10 mt-7 lg:mt-[15rem]' />
       </div>
 
-      <div className='md:mt-[7rem]'>
+      <div className='lg:mt-[7rem] '>
         <Box sx={{ width: '100%' }} className="flex flex-col">
           <Box sx={{ borderBottom: 0, borderColor: 'divider', padding: 0, width: '11.25rem', marginLeft: 3 }}>
             <Tabs
@@ -80,6 +81,12 @@ export default function BasicTabs() {
               <Tab label="Day 2" {...a11yProps(1)} sx={{ padding: 0 }} />
             </Tabs>
           </Box>
+
+
+
+
+          {/*<----Agenda day01 tab start----> */}
+
           <TabPanel value={value} index={0}>
             <div className='bg-[#ffe4dc] h-[42rem] md:h-[39rem] w-[auto] md:w-[30rem] rounded-2xl'>
               <div className='flex h-[7rem] rounded-xl flex-col md:flex md:flex-row'>
@@ -181,11 +188,11 @@ export default function BasicTabs() {
 
                 {/*col-2 */}
 
-                <div className='w-[63%] h-[31.5rem]'>
+                <div className='w-[63%] h-[31.5rem'>
 
                   {/* row-1 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Registration Confirmation</h1>
                     </div>
                   </div>
@@ -193,7 +200,7 @@ export default function BasicTabs() {
 
                   {/* row-2 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Event Start & Welcome</h1>
                     </div>
                   </div>
@@ -201,15 +208,15 @@ export default function BasicTabs() {
 
                   {/* row-3 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
-                      <h1 className={style.agendaDescriptionStyle}>Explain the Challenge</h1>
+                    <div className={style.lgDescriptionStyle}>
+                      <h1 className={style.agendaDescriptionStyle}>Challenge Explanation</h1>
                     </div>
                   </div>
                   {/* row-3 */}
 
                   {/* row-4 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Challenge</h1>
                     </div>
                   </div>
@@ -217,7 +224,7 @@ export default function BasicTabs() {
 
                   {/* row-5 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Lunch</h1>
                     </div>
                   </div>
@@ -225,7 +232,7 @@ export default function BasicTabs() {
 
                   {/* row-6 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Challenge</h1>
                     </div>
                   </div>
@@ -233,15 +240,15 @@ export default function BasicTabs() {
 
                   {/* row-7 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
-                      <h1 className={style.agendaDescriptionStyle}>Star to the judge</h1>
+                    <div className={style.lgDescriptionStyle}>
+                      <h1 className={style.agendaDescriptionStyle}>Star to the Judge</h1>
                     </div>
                   </div>
                   {/* row-7 */}
 
                   {/* row-8 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Vote of Thanks</h1>
                     </div>
                   </div>
@@ -255,6 +262,14 @@ export default function BasicTabs() {
 
             </div>
           </TabPanel>
+
+          {/*<----Agenda day01 tab end----> */}
+
+
+
+
+          {/*<----Agenda day02 tab start----> */}
+
           <TabPanel value={value} index={1}>
             <div className='bg-[#ffe4dc] h-[42rem] md:h-[39rem] w-[auto] md:w-[30rem] rounded-2xl'>
               <div className='flex h-[7rem] rounded-xl flex-col md:flex md:flex-row'>
@@ -344,8 +359,8 @@ export default function BasicTabs() {
                   {/* row-8 */}
                   <div className={style.agendarowStyle}>
                     <div className='text-right'>
-                      <h1 className='font-normal text-xl'>17:45</h1>
-                      <p className='font-normal text-[#0e0e0e8a] p-0 m-0'>18:00</p>
+                      <h1 className='font-normal text-xl'>15:15</h1>
+                      <p className='font-normal text-[#0e0e0e8a] p-0 m-0'>16:00</p>
                     </div>
                   </div>
                   {/* row-8 */}
@@ -360,7 +375,7 @@ export default function BasicTabs() {
 
                   {/* row-1 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Registration Confirmation</h1>
                     </div>
                   </div>
@@ -368,15 +383,15 @@ export default function BasicTabs() {
 
                   {/* row-2 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
-                      <h1 className={style.agendaDescriptionStyle}>Welcome & chief guest speech</h1>
+                    <div className={style.lgDescriptionStyle}>
+                      <h1 className={style.agendaDescriptionStyle}>Welcome & Chief Guest Speech</h1>
                     </div>
                   </div>
                   {/* row-2 */}
 
                   {/* row-3 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>First Speaker</h1>
                     </div>
                   </div>
@@ -384,7 +399,7 @@ export default function BasicTabs() {
 
                   {/* row-4 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Second Speaker</h1>
                     </div>
                   </div>
@@ -392,7 +407,7 @@ export default function BasicTabs() {
 
                   {/* row-5 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Third Speaker</h1>
                     </div>
                   </div>
@@ -400,7 +415,7 @@ export default function BasicTabs() {
 
                   {/* row-6 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Fourth Speaker</h1>
                     </div>
                   </div>
@@ -408,7 +423,7 @@ export default function BasicTabs() {
 
                   {/* row-7 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
+                    <div className={style.lgDescriptionStyle}>
                       <h1 className={style.agendaDescriptionStyle}>Fifth Speaker</h1>
                     </div>
                   </div>
@@ -416,8 +431,8 @@ export default function BasicTabs() {
 
                   {/* row-8 */}
                   <div className={style.agendarowStyle}>
-                    <div className='text-center'>
-                      <h1 className={style.agendaDescriptionStyle}>Award Ceremony & <br /> Vote of Thanks</h1>
+                    <div className={style.lgDescriptionStyle}>
+                      <h1 className={style.agendaDescriptionStyle}>Award Ceremony & Vote of Thanks</h1>
                     </div>
                   </div>
                   {/* row-8 */}
@@ -430,6 +445,12 @@ export default function BasicTabs() {
 
             </div>
           </TabPanel>
+
+          {/*<----Agenda day01 tab end----> */}
+
+
+
+
         </Box>
       </div>
     </section>

@@ -38,7 +38,7 @@ function About({ }: Props) {
 
               className="flex">
               <div
-                className="flex flex-col gap-5 justify-center lg:w-[45rem] md:w-[30rem] rounded-lg bg-30 px-10 pt-5 pb-9">
+                className="flex flex-col gap-5 justify-center lg:w-[45rem] md:w-[31.6rem] rounded-lg bg-30 px-10 pt-5 pb-9">
                 <h5
                   className="mb-2 text-xl font-medium text-white">
                   Lorem ipsum dolor sit amet consectetur <br /> adipiscing elit.
