@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -24,7 +25,7 @@ function DayOneRegulations({ }: Props) {
         <p className='text-center space-y-5 mx-[15%] sm:mx-[20%] '>
           <div className='text-6xl sm:text-9xl text-30 font-semibold'>Feeling Great ?</div>
           <div className='text-3xl sm:text-5xl text-70 font-semibold'>Then Let’s Register</div>
-          <div><button className='btn-1 mt-10'>Register Now</button></div>
+          <div><Link to={'/register'}><button className='btn-1 mt-10'>Register Now</button></Link></div>
         </p>
       </div>
     </div>
