@@ -22,12 +22,14 @@ function About({ }: Props) {
         <p className="mq_txt mr-11"> Artificial intelligence </p>
         <p className="mq_txt mx-11"> Robotics </p>
         <p className="mq_txt mx-11"> internet of things </p>
-        <p className="mq_txt mx-11"> Artificial intelligence </p>
+        <p className="mq_txt mx-11"> Big Data </p>
+        <p className="mq_txt mx-11"> Cloud Computing </p>
         <p className="mq_txt mx-11"> Robotics </p>
         <p className="mq_txt mx-11"> internet of things </p>
         <p className="mq_txt mx-11"> Artificial intelligence </p>
         <p className="mq_txt mx-11"> Robotics </p>
         <p className="mq_txt mx-11"> internet of things </p>
+        <p className="mq_txt mx-11"> Cloud Computing </p>
 
       </Marquee>
       <div className='flex flex-col md:flex-row gap-7 px-5 lg:flex-row justify-center lg:mt-[6rem] lg:mb-[6rem]'>
