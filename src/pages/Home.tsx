@@ -1,6 +1,7 @@
 import React from 'react'
 import About from '../components/About'
 import Agenda from '../components/Agenda'
+import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import NavBar from '../components/NavBar'
 import Speakers from '../components/Speakers'
@@ -13,6 +14,7 @@ type Props = {}
 const Home = (props: Props) => {
     return (
         <div>
+            <NavBar />
             <Hero />
             <About />
             <Agenda />
@@ -20,6 +22,7 @@ const Home = (props: Props) => {
             <Sponsors />
             <Swag />
             {/* <Teams /> */}
+            <Footer />
         </div>
     )
 }
