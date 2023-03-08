@@ -24,6 +24,7 @@
     "react-router-dom": "^6.8.2",
     "react-simple-typewriter": "^5.0.1",
     "react-single-page-navigation": "^1.0.1",
+    "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.1"
   },
   "devDependencies": {

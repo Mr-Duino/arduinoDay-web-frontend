@@ -7,9 +7,13 @@ import {
   getDoc
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import MoonLoader from "react-spinners/MoonLoader";
+import Footer from "../components/Footer";
 
 
 type Props = {};
+
 
 function Register({ }: Props) {
   const [fname, setFName] = useState(""); // Full Name
@@ -37,6 +41,15 @@ function Register({ }: Props) {
   const [formSubmited, setFormSubmitted] = useState(false);
   const [exists, setExists] = useState(false);
 
+  const [loading, setLoading] = useState(false);
+
+  const override = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+
+
   const onOptionChange = (event: any) => {
     setHackthon(event.target.value);
   };
@@ -55,6 +68,7 @@ function Register({ }: Props) {
 
   const onSubmitHandler = async (event: any) => {
     event.preventDefault();
+    setLoading(true);
     const docData = {
       FullName: fname,
       Email: email,
@@ -91,6 +105,7 @@ function Register({ }: Props) {
       console.log("No such document!");
       await setDoc(doc(db, "Arduino_Day_Registration", email), docData);
       setFormSubmitted(true);
+      setLoading(false);
     }
   };
 
@@ -100,445 +115,471 @@ function Register({ }: Props) {
       "border-2 bg-10/0 border-30 rounded-md w-[100%] h-9 mt-2 md:h-10 active:border-70 focus:border-70 active:outline-none focus:outline-none text-30 font-medium px-3",
   };
 
+
   return (
-    <div className="px-4 md:px-10 lg:px-20 ">
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 mt-10 max-w-[1000px]">
-          <m.div
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-            }}
-            className="flex flex-col justify-center"
-          >
-            <h1 className="text-70 text-8xl font-semibold">Why</h1>
-            <br />
-            <h1 className="text-30 font-semibold text-4xl -mt-3 ">
-              Should I Register ?
-            </h1>
+    <div className="px-2">
+      <NavBar />
 
-            <p className="text-80 text-sm font-medium my-4 ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor.
-            </p>
+      <div className="px-4 md:px-10 lg:px-20 ">
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:px-3 mt-10 max-w-[1000px]">
+            <m.div
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+              className="flex flex-col justify-center"
+            >
+              <h1 className="text-70 text-8xl font-semibold">Why</h1>
+              <br />
+              <h1 className="text-30 font-semibold text-4xl -mt-3 ">
+                Should I Register ?
+              </h1>
 
-            {/* <button className='btn-1'>Let's Register</button> */}
-          </m.div>
-          <m.div
-            initial={{
-              opacity: 0,
-              y: 100,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-            }}
-            className="flex justify-center mt-7"
-          >
-            <img
-              className="object-cover"
-              src="/register-img.png"
-              loading="lazy"
-              alt="Registration Background Image"
-            />
-          </m.div>
-        </div>
-      </div>
+              <p className="text-80 text-sm font-medium my-4 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor.
+              </p>
 
-
-
-      <m.div
-        initial={{
-          opacity: 0,
-          y: -100,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-          ease: "easeInOut",
-        }}
-        className="mt-20 max-w-4xl flex flex-col gap-10 mx-auto md:justify-center"
-      >
-
-        <div>
-          <h3 className="text-30 text-md font-medium"><span className="text-70 font-bold">*</span>If you are participating to the Arduino Day, please Read More about <span className="text-70 underline cursor-pointer"> <Link to={'/dayone-regulations'}>Day 1</Link></span> Rules & Regulations & Read more about <span className="text-70 underline cursor-pointer"><Link to={'/daytwo-regulations'}>Day 2</Link></span> agenda & regulations.</h3>
+              {/* <button className='btn-1'>Let's Register</button> */}
+            </m.div>
+            <m.div
+              initial={{
+                opacity: 0,
+                y: 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+              className="flex justify-center mt-7"
+            >
+              <img
+                className="object-cover"
+                src="/register-img.png"
+                loading="lazy"
+                alt="Registration Background Image"
+              />
+            </m.div>
+          </div>
         </div>
 
-        <hr />
 
-        {!formSubmited && (
-          <form onSubmit={onSubmitHandler}>
-            <div className="grid grid-cols-1 gap-8">
-              <div>
-                <h4 className={style.formLableStyle}>Full Name</h4>
-                <input
-                  className={style.formFieldStyle}
-                  type="text"
-                  value={fname}
-                  onChange={(e) => setFName(e.target.value)}
-                  required
-                />
-              </div>
 
-              <div>
-                <h4 className={style.formLableStyle}>Email</h4>
-                <input
-                  className={style.formFieldStyle}
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+        <m.div
+          initial={{
+            opacity: 0,
+            y: -100,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+          }}
+          className="mt-20 max-w-4xl flex flex-col gap-10 mx-auto md:justify-center"
+        >
 
-              <div className="grid grid-cols-1 gap-4">
+          <div>
+            <h3 className="text-30 text-md font-medium"><span className="text-70 font-bold">*</span>If you are participating to the Arduino Day, please Read More about <span className="text-70 underline cursor-pointer"> <Link to={'/dayone-regulations'}>Day 1</Link></span> Rules & Regulations & Read more about <span className="text-70 underline cursor-pointer"><Link to={'/daytwo-regulations'}>Day 2</Link></span> agenda & regulations.</h3>
+          </div>
+
+          <hr />
+
+          {!formSubmited && (
+            <form onSubmit={onSubmitHandler}>
+              <div className="grid grid-cols-1 gap-8">
                 <div>
-                  <h4 className={style.formLableStyle}>Student/Undergraduate</h4>
-                  <div className="flex flex-row gap-5 mt-2 mb-5">
-                    <div>
-                      <input
-                        className=""
-                        type="radio"
-                        id="student-radio"
-                        name="status"
-                        value="Student"
-                        checked={uniorscl === "Student"}
-                        onChange={(event) => onOptionChangeEdu(event)}
-                      />{" "}
-                      <span className="text-30 font-medium text-md">Student</span>
-                    </div>
-                    <div>
-                      <input
-                        type="radio"
-                        id="undergraduate-radio"
-                        name="status"
-                        value="Undergraduate"
-                        checked={uniorscl === "Undergraduate"}
-                        onChange={(event) => onOptionChangeEdu(event)}
-                      />{" "}
-                      <span className="text-30 font-medium text-md">
-                        Undergraduate
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h4 className={style.formLableStyle}>School/University Name</h4>
+                  <h4 className={style.formLableStyle}>Full Name</h4>
                   <input
                     className={style.formFieldStyle}
                     type="text"
-                    value={eduName}
-                    onChange={(e) => setEduName(e.target.value)}
+                    value={fname}
+                    onChange={(e) => setFName(e.target.value)}
                     required
                   />
                 </div>
-              </div>
 
-              <div>
-                <h4 className={style.formLableStyle}>Phone Number</h4>
-                <input
-                  className={style.formFieldStyle}
-                  type="text"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
-              </div>
+                <div>
+                  <h4 className={style.formLableStyle}>Email</h4>
+                  <input
+                    className={style.formFieldStyle}
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <hr />
-
-              <div>
-                <h4 className={style.formLableStyle}>
-                  What is the date you are willing to participate
-                </h4>
-                <h5 className="text-30 font-normal text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam.
-                </h5>
-                <div className="flex flex-row gap-5 mt-2">
+                <div className="grid grid-cols-1 gap-4">
                   <div>
-                    <input
-                      type="checkbox"
-                      id="subscribe"
-                      name="subscribe"
-                      checked={day1}
-                      onChange={(e) => setDay1(e.target.checked)}
-                    />{" "}
-                    <span className="text-30 font-medium text-md">Day 1</span>
+                    <h4 className={style.formLableStyle}>Student/Undergraduate</h4>
+                    <div className="flex flex-row gap-5 mt-2 mb-5">
+                      <div>
+                        <input
+                          className=""
+                          type="radio"
+                          id="student-radio"
+                          name="status"
+                          value="Student"
+                          checked={uniorscl === "Student"}
+                          onChange={(event) => onOptionChangeEdu(event)}
+                        />{" "}
+                        <span className="text-30 font-medium text-md">Student</span>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="undergraduate-radio"
+                          name="status"
+                          value="Undergraduate"
+                          checked={uniorscl === "Undergraduate"}
+                          onChange={(event) => onOptionChangeEdu(event)}
+                        />{" "}
+                        <span className="text-30 font-medium text-md">
+                          Undergraduate
+                        </span>
+                      </div>
+                    </div>
                   </div>
                   <div>
+                    <h4 className={style.formLableStyle}>School/University Name</h4>
                     <input
-                      type="checkbox"
-                      id="subscribe"
-                      name="subscribe"
-                      checked={day2}
-                      onChange={(e) => setDay2(e.target.checked)}
-                    />{" "}
-                    <span className="text-30 font-medium text-md">Day 2</span>
+                      className={style.formFieldStyle}
+                      type="text"
+                      value={eduName}
+                      onChange={(e) => setEduName(e.target.value)}
+                      required
+                    />
                   </div>
                 </div>
-              </div>
 
-              {day1 && (
+                <div>
+                  <h4 className={style.formLableStyle}>Phone Number</h4>
+                  <input
+                    className={style.formFieldStyle}
+                    type="text"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                </div>
+
+                <hr />
+
                 <div>
                   <h4 className={style.formLableStyle}>
-                    Are you participating in the Hackathon ?
+                    What is the date you are willing to participate
                   </h4>
                   <h5 className="text-30 font-normal text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam.
                   </h5>
                   <div className="flex flex-row gap-5 mt-2">
                     <div>
                       <input
-                        type="radio"
+                        type="checkbox"
                         id="subscribe"
                         name="subscribe"
-                        value="Yes"
-                        checked={hackthon === "Yes"}
-                        onChange={(event) => onOptionChange(event)}
+                        checked={day1}
+                        onChange={(e) => setDay1(e.target.checked)}
                       />{" "}
-                      <span className="text-30 font-medium text-md">Yes</span>
+                      <span className="text-30 font-medium text-md">Day 1</span>
                     </div>
                     <div>
                       <input
-                        type="radio"
+                        type="checkbox"
                         id="subscribe"
                         name="subscribe"
-                        value="No"
-                        checked={hackthon === "No"}
-                        onChange={(event) => onOptionChange(event)}
+                        checked={day2}
+                        onChange={(e) => setDay2(e.target.checked)}
                       />{" "}
-                      <span className="text-30 font-medium text-md">No</span>
+                      <span className="text-30 font-medium text-md">Day 2</span>
                     </div>
                   </div>
                 </div>
-              )}
 
-              <hr />
-              {day1 && hackthon === "Yes" && (
-                <div className="grid grid-cols-1 gap-4">
+                {day1 && (
                   <div>
-                    <h4 className={style.formLableStyle}>Team Name</h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="text"
-                      value={teamName}
-                      onChange={(e) => setTeamName(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <h4 className={style.formLableStyle}>Full Name (Member 1)</h4>
-                    <input
-                      className={style.formFieldStyle}
-                      value={m1fname}
-                      onChange={(e) => setM1FName(e.target.value)}
-                      type="text"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <h4 className={style.formLableStyle}>Email (Member 1)</h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="email"
-                      value={m1email}
-                      onChange={(e) => setM1Email(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-4">
-                    <div>
-                      <h4 className={style.formLableStyle}>
-                        Student/Undergraduate (Member 1)
-                      </h4>
-                      <div className="flex flex-row gap-5 mt-2 mb-5">
-                        <div>
-                          <input
-                            type="radio"
-                            id="student-radio"
-                            name="status"
-                            value="Student"
-                            checked={m1uniorscl === "Student"}
-                            onChange={(event) => onOptionChangeEduM1(event)}
-                          />{" "}
-                          <span className="text-30 font-medium text-md">
-                            Student
-                          </span>
-                        </div>
-                        <div>
-                          <input
-                            type="radio"
-                            id="undergraduate-radio"
-                            name="status"
-                            value="Undergraduate"
-                            checked={m1uniorscl === "Undergraduate"}
-                            onChange={(event) => onOptionChangeEduM1(event)}
-                          />{" "}
-                          <span className="text-30 font-medium text-md">
-                            Undergraduate
-                          </span>
-                        </div>
+                    <h4 className={style.formLableStyle}>
+                      Are you participating in the Hackathon ?
+                    </h4>
+                    <h5 className="text-30 font-normal text-sm">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam.
+                    </h5>
+                    <div className="flex flex-row gap-5 mt-2">
+                      <div>
+                        <input
+                          type="radio"
+                          id="subscribe"
+                          name="subscribe"
+                          value="Yes"
+                          checked={hackthon === "Yes"}
+                          onChange={(event) => onOptionChange(event)}
+                        />{" "}
+                        <span className="text-30 font-medium text-md">Yes</span>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="subscribe"
+                          name="subscribe"
+                          value="No"
+                          checked={hackthon === "No"}
+                          onChange={(event) => onOptionChange(event)}
+                        />{" "}
+                        <span className="text-30 font-medium text-md">No</span>
                       </div>
                     </div>
+                  </div>
+                )}
+
+                <hr />
+                {day1 && hackthon === "Yes" && (
+                  <div className="grid grid-cols-1 gap-4">
+                    <div>
+                      <h4 className={style.formLableStyle}>Team Name</h4>
+                      <input
+                        className={style.formFieldStyle}
+                        type="text"
+                        value={teamName}
+                        onChange={(e) => setTeamName(e.target.value)}
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className={style.formLableStyle}>Full Name (Member 1)</h4>
+                      <input
+                        className={style.formFieldStyle}
+                        value={m1fname}
+                        onChange={(e) => setM1FName(e.target.value)}
+                        type="text"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className={style.formLableStyle}>Email (Member 1)</h4>
+                      <input
+                        className={style.formFieldStyle}
+                        type="email"
+                        value={m1email}
+                        onChange={(e) => setM1Email(e.target.value)}
+                        required
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-4">
+                      <div>
+                        <h4 className={style.formLableStyle}>
+                          Student/Undergraduate (Member 1)
+                        </h4>
+                        <div className="flex flex-row gap-5 mt-2 mb-5">
+                          <div>
+                            <input
+                              type="radio"
+                              id="student-radio"
+                              name="status"
+                              value="Student"
+                              checked={m1uniorscl === "Student"}
+                              onChange={(event) => onOptionChangeEduM1(event)}
+                            />{" "}
+                            <span className="text-30 font-medium text-md">
+                              Student
+                            </span>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="undergraduate-radio"
+                              name="status"
+                              value="Undergraduate"
+                              checked={m1uniorscl === "Undergraduate"}
+                              onChange={(event) => onOptionChangeEduM1(event)}
+                            />{" "}
+                            <span className="text-30 font-medium text-md">
+                              Undergraduate
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className={style.formLableStyle}>
+                          School/University Name (Member 1)
+                        </h4>
+                        <input
+                          className={style.formFieldStyle}
+                          type="text"
+                          value={eduM1Name}
+                          onChange={(e) => setEduM1Name(e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
                     <div>
                       <h4 className={style.formLableStyle}>
-                        School/University Name (Member 1)
+                        Phone Number (Member 1)
                       </h4>
                       <input
                         className={style.formFieldStyle}
                         type="text"
-                        value={eduM1Name}
-                        onChange={(e) => setEduM1Name(e.target.value)}
+                        value={m1phone}
+                        onChange={(e) => setM1Phone(e.target.value)}
                         required
                       />
                     </div>
-                  </div>
 
-                  <div>
-                    <h4 className={style.formLableStyle}>
-                      Phone Number (Member 1)
-                    </h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="text"
-                      value={m1phone}
-                      onChange={(e) => setM1Phone(e.target.value)}
-                      required
-                    />
-                  </div>
+                    <hr />
 
-                  <hr />
-
-                  <div>
-                    <h4 className={style.formLableStyle}>Full Name (Member 2)</h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="text"
-                      value={m2fname}
-                      onChange={(e) => setM2FName(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <h4 className={style.formLableStyle}>Email (Member 2)</h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="email"
-                      value={m2email}
-                      onChange={(e) => setM2Email(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-4">
                     <div>
-                      <h4 className={style.formLableStyle}>
-                        Student/Undergraduate (Member 2)
-                      </h4>
-                      <div className="flex flex-row gap-5 mt-2 mb-5">
-                        <div>
-                          <input
-                            type="radio"
-                            id="student-radio"
-                            name="status"
-                            value="Student"
-                            checked={m2uniorscl === "Student"}
-                            onChange={(event) => onOptionChangeEduM2(event)}
-                          />{" "}
-                          <span className="text-30 font-medium text-md">
-                            Student
-                          </span>
-                        </div>
-                        <div>
-                          <input
-                            type="radio"
-                            id="undergraduate-radio"
-                            name="status"
-                            value="Undergraduate"
-                            checked={m2uniorscl === "Undergraduate"}
-                            onChange={(event) => onOptionChangeEduM2(event)}
-                          />{" "}
-                          <span className="text-30 font-medium text-md">
-                            Undergraduate
-                          </span>
+                      <h4 className={style.formLableStyle}>Full Name (Member 2)</h4>
+                      <input
+                        className={style.formFieldStyle}
+                        type="text"
+                        value={m2fname}
+                        onChange={(e) => setM2FName(e.target.value)}
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className={style.formLableStyle}>Email (Member 2)</h4>
+                      <input
+                        className={style.formFieldStyle}
+                        type="email"
+                        value={m2email}
+                        onChange={(e) => setM2Email(e.target.value)}
+                        required
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-4">
+                      <div>
+                        <h4 className={style.formLableStyle}>
+                          Student/Undergraduate (Member 2)
+                        </h4>
+                        <div className="flex flex-row gap-5 mt-2 mb-5">
+                          <div>
+                            <input
+                              type="radio"
+                              id="student-radio"
+                              name="status"
+                              value="Student"
+                              checked={m2uniorscl === "Student"}
+                              onChange={(event) => onOptionChangeEduM2(event)}
+                            />{" "}
+                            <span className="text-30 font-medium text-md">
+                              Student
+                            </span>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="undergraduate-radio"
+                              name="status"
+                              value="Undergraduate"
+                              checked={m2uniorscl === "Undergraduate"}
+                              onChange={(event) => onOptionChangeEduM2(event)}
+                            />{" "}
+                            <span className="text-30 font-medium text-md">
+                              Undergraduate
+                            </span>
+                          </div>
                         </div>
                       </div>
+                      <div>
+                        <h4 className={style.formLableStyle}>
+                          School/University Name (Member 2)
+                        </h4>
+                        <input
+                          className={style.formFieldStyle}
+                          type="text"
+                          value={eduM2Name}
+                          onChange={(e) => setEduM2Name(e.target.value)}
+                          required
+                        />
+                      </div>
                     </div>
+
                     <div>
                       <h4 className={style.formLableStyle}>
-                        School/University Name (Member 2)
+                        Phone Number (Member 2)
                       </h4>
                       <input
                         className={style.formFieldStyle}
                         type="text"
-                        value={eduM2Name}
-                        onChange={(e) => setEduM2Name(e.target.value)}
+                        value={m2phone}
+                        onChange={(e) => setM2Phone(e.target.value)}
                         required
                       />
                     </div>
                   </div>
+                )}
+              </div>
 
-                  <div>
-                    <h4 className={style.formLableStyle}>
-                      Phone Number (Member 2)
-                    </h4>
-                    <input
-                      className={style.formFieldStyle}
-                      type="text"
-                      value={m2phone}
-                      onChange={(e) => setM2Phone(e.target.value)}
-                      required
-                    />
-                  </div>
+
+              <div className="flex items-center justify-center mt-10">
+                <div className="mb-12">
+                  <MoonLoader
+                    color={"#00676B"}
+                    loading={loading && !exists}
+                    cssOverride={override}
+                    size={30}
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+                  />
                 </div>
-              )}
+                {!loading && (
+                  <input className="btn-1 mb-8 cursor-pointer" type="submit" value="Register" />
+                )}
+              </div>
+            </form>
+          )}
+          {/* Add your thank you note here */}
+          {formSubmited && (
+            <div className="flex flex-col justify-center items-center my-10">
+              <h1 className="text-center text-4xl text-70 font-medium">Thank You !</h1>
+              <p className="text-center text-sm text-30 font-medium">Thank you for registering for the Arduino Day 2023.</p>
+              <div>
+                <Link to={'/'}>
+                  <button className="btn-1 mt-10">Back To Home</button>
+                </Link>
+              </div>
             </div>
-
-            <div className="flex items-center justify-center mt-10">
-              <input className="btn-1 mb-8" type="submit" value="Register" />
+          )}
+          {exists && (
+            <div className="flex flex-col justify-center items-center my-3">
+              <h1 className="text-center text-4xl text-70 font-medium">User Already Registered!</h1>
+              <p className="text-center text-sm text-30 font-medium">{email} is already in use  </p>
+              <div>
+                  <button onClick={() => {window.location.reload(true)}} className="btn-1 mt-10">Register Again</button>
+              </div>
             </div>
-          </form>
-        )}
-        {/* Add your thank you note here */}
-        {formSubmited && (
-          <div className="flex flex-col justify-center items-center my-10">
-            <h1 className="text-center text-4xl text-70 font-medium">Thank You !</h1>
-            <p className="text-center text-sm text-30 font-medium">Thank you for registering for the Arduino Day 2023.</p>
-            <div>
-              <Link to={'/'}>
-                <button className="btn-1 mt-10">Back To Home</button>
-              </Link>
-            </div>
-
-          </div>
-        )}
-        {exists && (<div>You already Registed!</div>)}
-      </m.div>
+          )}
+        </m.div>
+      </div>
+      <Footer />
     </div>
   );
 }
