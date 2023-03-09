@@ -9,7 +9,7 @@ const PrivacyPolicy = (props: Props) => {
     return (
         <div>
             <NavBar />
-            <div className='mt-32 sm:mt-44 sm:mb-16'>
+            {/* <div className='mt-32 sm:mt-44 sm:mb-16'>
                 <div className='grid grid-flow-row md:grid-flow-col px-[8.33%] items-end gap-y-14 sm:gap-x-32 lg:gap-x-56 mb-16 sm:mb-32'>
                     <div className=''><p className='space-y-5'>
                         <div className='text-3xl sm:text-4xl text-30 font-semibold'>Privacy Policy </div>
@@ -135,7 +135,7 @@ const PrivacyPolicy = (props: Props) => {
                 </div>
 
 
-            </div>
+            </div> */}
             <Footer />
         </div>
     )

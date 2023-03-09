@@ -6,9 +6,8 @@ import NotFound from './pages/NotFound'
 import DayOneRegulations from './pages/DayOneRegulations'
 import DayTwoRegulations from './pages/DayTwoRegulations'
 import HomeCall from './pages/HomeCall'
-import PrivacyPolicy from './pages/privacyPolicy'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import DMCARemoval from './pages/DMCARemoval'
-
 
 function App() {
 

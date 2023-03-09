@@ -25,7 +25,7 @@ function DayTwoRegulations({ }: Props) {
           </div>
         </div>
 
-        <div className="bg-[url('/day1-background1.svg')] bg-cover py-20">
+        <div className="bg-[url('./day1-background1.svg')] bg-cover py-20">
           <p className='text-center space-y-5 mx-[15%] sm:mx-[20%] '>
             <div className='text-6xl sm:text-9xl text-30 font-semibold'>Feeling Great ?</div>
             <div className='text-3xl sm:text-5xl text-70 font-semibold'>Then Let’s Register</div>
