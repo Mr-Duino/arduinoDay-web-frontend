@@ -1,9 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 type Props = {}
 
 const Footer = ({ }: Props) => {
+
+  const [currentRoute, setCurrentRoute] = useState('/');
+  const location = useLocation();
+
+  useEffect(() => {
+    setCurrentRoute(location.pathname.split("/")[1]);
+    console.log(location.pathname.split("/")[1]);
+  }, []);
+
+  const path = {
+    pathMethod: `block py-2 pl-3 pr-4 text-30 rounded md:hover:bg-transparent md:p-0 ${currentRoute != 'register' ? "md:hover:text-70" : ''} ${currentRoute === 'register' ? "text-80/20 cursor-not-allowed" : ''}   `
+  }
+
   return (
     <footer>
       
@@ -40,11 +53,11 @@ const Footer = ({ }: Props) => {
                     <a>Home</a>
                   </Link>
                 </li>
-                <li className="hover:text-70 pb-2"><a href="#">Agenda</a></li>
-                <li className="hover:text-70 pb-2"><a href="#">Speakers</a></li>
-                <li className="hover:text-70 pb-2"><a href="#">Sponsors</a></li>
-                <li className="hover:text-70 pb-2"><a href="#">Our Teams</a></li>
-                <li className="hover:text-70 pb-2"><a href="#">Contact Us</a></li>
+                <li className={path.pathMethod}><a href="#">Agenda</a></li>
+                <li className={path.pathMethod}><a href="#">Speakers</a></li>
+                <li className={path.pathMethod}><a href="#">Sponsors</a></li>
+                <li className={path.pathMethod}><a href="#">Our Teams</a></li>
+                <li className={path.pathMethod}><a href="#">Contact Us</a></li>
               </ul>
             </div>
 

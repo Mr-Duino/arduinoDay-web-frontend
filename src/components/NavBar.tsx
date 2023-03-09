@@ -19,12 +19,19 @@ const Nav = () => {
   }, []);
 
   const path = {
-    pathMethod : `block py-2 pl-3 pr-4 text-30 rounded md:hover:bg-transparent md:p-0 ${currentRoute != 'register' ? "md:hover:text-70" : ''} ${currentRoute === 'register' ? "text-80/20 cursor-not-allowed" : ''} ${activeNav === "#agenda" ? "text-70" : ""
-  }  `
+    pathMethod: `block py-2 pl-3 pr-4 text-30 rounded md:hover:bg-transparent md:p-0 ${currentRoute != 'register' ? "md:hover:text-70" : ''} ${currentRoute === 'register' ? "text-80/20 cursor-not-allowed" : ''}   `
   }
 
+  useEffect(() => {
+    const element = document.getElementById('navBar');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [])
+
   return (
-    <m.div
+    <m.div 
+      id="navBar"
       className="mb-28">
       <div className=" w-full z-50 fixed top-0 left-0 bg-slate-100 py-6 lg:px-20 px-4 ">
         <div className=" lg:flex items-center justify-between mx-auto max-w-[1280px]">
@@ -79,7 +86,8 @@ const Nav = () => {
               <a
                 href="#agenda"
                 onClick={() => setActiveNav("#agenda")}
-                className={path.pathMethod}
+                className={`${path.pathMethod} ${activeNav === "#agenda" ? "text-70" : ""
+                  }`}
               >
                 Agenda
               </a>
@@ -89,7 +97,8 @@ const Nav = () => {
               <a
                 href="#speakers"
                 onClick={() => setActiveNav("#speakers")}
-                className={path.pathMethod}
+                className={`${path.pathMethod} ${activeNav === "#speakers" ? "text-70" : ""
+                  }`}
               >
                 Speakers
               </a>
@@ -98,7 +107,8 @@ const Nav = () => {
               <a
                 href="#sponsors"
                 onClick={() => setActiveNav("#sponsors")}
-                className={path.pathMethod}
+                className={`${path.pathMethod} ${activeNav === "#sponsors" ? "text-70" : ""
+                  }`}
               >
                 Sponsors
               </a>
@@ -107,7 +117,8 @@ const Nav = () => {
               <a
                 href="#ourTeam"
                 onClick={() => setActiveNav("#ourTeam")}
-                className={path.pathMethod}
+                className={`${path.pathMethod} ${activeNav === "#ourTeam" ? "text-70" : ""
+                  }`}
               >
                 Our Team
               </a>
@@ -116,7 +127,8 @@ const Nav = () => {
               <a
                 href="#contactUs"
                 onClick={() => setActiveNav("#contactUs")}
-                className={path.pathMethod}
+                className={`${path.pathMethod} ${activeNav === "#contactUs" ? "text-70" : ""
+                  }`}
               >
                 Contact Us
               </a>
