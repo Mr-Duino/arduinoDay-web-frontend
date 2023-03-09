@@ -9,6 +9,9 @@ import DayTwoRegulations from './pages/DayTwoRegulations'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import HomeCall from './pages/HomeCall'
+import PrivacyPolicy from './pages/privacyPolicy'
+import DMCARemoval from './pages/DMCARemoval'
+
 
 function App() {
 
@@ -22,6 +25,8 @@ function App() {
         <Route path='*' element={<NotFound />} />
         <Route path='/dayone-regulations' element={<DayOneRegulations />} />
         <Route path='/daytwo-regulations' element={<DayTwoRegulations />} />
+        <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
+        <Route path='/dmca' element={<DMCARemoval />} />
       </Routes>
       {/* <Footer /> */}
     </div>
