@@ -9,7 +9,7 @@ const PrivacyPolicy = (props: Props) => {
     return (
         <div>
             <NavBar />
-            {/* <div className='mt-32 sm:mt-44 sm:mb-16'>
+            <div className='mt-32 sm:mt-44 sm:mb-16'>
                 <div className='grid grid-flow-row md:grid-flow-col px-[8.33%] items-end gap-y-14 sm:gap-x-32 lg:gap-x-56 mb-16 sm:mb-32'>
                     <div className=''><p className='space-y-5'>
                         <div className='text-3xl sm:text-4xl text-30 font-semibold'>Privacy Policy </div>
@@ -48,13 +48,13 @@ const PrivacyPolicy = (props: Props) => {
                             We may use the information we collect from you when you register, make a purchase, sign up
                             for our newsletter, respond to a survey or marketing communication, surf the website, or use
                             certain other site features in the following ways: <br /><br />
-                            <samp>
+                            <div>
                                 To personalize your experience and to allow us to deliver the type of content
                                 and product offerings in which you are most interested.
                                 To improve our website in order to better serve you.
                                 To send periodic emails regarding new content and offers that may interest
                                 you.
-                            </samp>
+                            </div>
                         </div>
 
                         <div className='text-3xl sm:text-4xl text-30 font-semibold'>How do we protect your information?</div>
@@ -106,14 +106,14 @@ const PrivacyPolicy = (props: Props) => {
 
                         <div className='text-3xl sm:text-4xl text-30 font-semibold'>We agree to the following:</div>
                         <div className='text-80 sm:text-lg leading-5'>
-                            <samp>
+                            <div>
                                 Not use false or misleading subjects or email addresses.
                                 Identify the message as an advertisement in some reasonable way.
                                 Include the physical address of our business or site headquarters.
                                 Monitor third-party email marketing services for compliance, if one is used.
                                 Honor opt-out/unsubscribe requests quickly.
                                 Allow users to unsubscribe by using the link at the bottom of each email.
-                            </samp><br /><br />
+                            </div><br /><br />
                             <div>
                                 If at any time you would like to unsubscribe from receiving future emails, you can email us at
                                 arduinocommunitysrilanka@gmail.com and we will promptly remove you from ALL
@@ -135,7 +135,7 @@ const PrivacyPolicy = (props: Props) => {
                 </div>
 
 
-            </div> */}
+            </div>
             <Footer />
         </div>
     )
