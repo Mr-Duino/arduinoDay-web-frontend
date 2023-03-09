@@ -32,9 +32,11 @@ const Footer = ({ }: Props) => {
               </div>
               <div className="text-80 text-[12px] font-normal opacity-60 pb-[20px]">
                 <span className="text-left">
-                  Lorem ipsum dolor sit amet consectetur adipiscing
-                  elit Ut et massa mi. Aliquam in hendrerit
-                  urna. Pellentesque sit amet sapien.
+                Arduino Day is a global celebration of the 
+                open-source electronics platform, Arduino, which has revolutionized 
+                the way people learn and interact with technology. The event is celebrated worldwide 
+                on the same day, and in Sri Lanka, it provides an opportunity for electronics enthusiasts, 
+                makers, and students to come together and share their passion for Arduino and its capabilities.
                 </span>
               </div>
 
