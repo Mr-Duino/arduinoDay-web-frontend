@@ -83,7 +83,7 @@ const Footer = ({ }: Props) => {
       <div className="w-full bg-white text-black opacity-[0.6] text-[14px] font-[400] px-10">
         <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
           <div className="text-center">
-            © 2023 Arduino Day | All Rights Reserved | <Link to={"/tnc"}> <button> Terms of Use </button> </Link>| <Link to={'/privacyPolicy'}> <button> Privacy Policy </button> </Link>
+            © 2023 Arduino Day | All Rights Reserved | <Link to={"/dmca"}> <button> DMCA Removal </button> </Link>| <Link to={'/privacyPolicy'}> <button> Privacy Policy </button> </Link>
           </div>
           <div className="text-right">
             &lt; Made by Dev Team of Arduino Day with ❤️ /&gt;
