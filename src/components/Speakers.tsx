@@ -23,28 +23,28 @@ const Speakers = ({ }: Props) => {
         <div className=''>
           <div id="speakersGrid" className="mt-10 mb-24 grid gap-3 md:grid-cols-2 lg:grid-cols-4 ">
             <div className="md:order-1 md:col-span-2">
-              <img src="/img1.png" alt="My Image" className={style.image} />
+              <img src="/dileepa.png" alt="My Image" className={style.image} />
             </div>
             <div className="border-2 border-30 rounded-md px-6 grid h-[200px] md:h-[100%] place-items-center md:order-2 md:col-span-2">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Wasath Theekshana
+                  Dileepa Jayawardena
                 </div>
                 <div className={style.infoCardDesc}>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
                 </div>
                 <div className={style.infoCardPost}>
-                  Full Stack Developer at LSEG
+                  Co-founder at myhub.lk
                 </div>
               </p>
             </div>
             <div className="md:order-4 lg:order-3">
-              <img src="/img1.png" alt="My Image" className={style.image} />
+              <img src="/migara.jpg" alt="My Image" className={style.image} />
             </div>
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-3 lg:order-4">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Wasath Theekshana
+                  Migara Amithodhana
                 </div>
                 <div className={style.infoCardDesc}>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
