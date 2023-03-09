@@ -25,7 +25,7 @@ const PrivacyPolicy = (props: Props) => {
                                 website.
                             </div>
 
-                            {/* <div className='text-3xl sm:text-4xl text-30 font-semibold'>What personal information do we collect from the people
+                            <div className='text-3xl sm:text-4xl text-30 font-semibold'>What personal information do we collect from the people
                                 that visit our website?</div>
                             <div className='text-80 sm:text-lg leading-5'>
                                 This page informs you of our policies regarding the collection, use and disclosure of personal
@@ -129,7 +129,7 @@ const PrivacyPolicy = (props: Props) => {
                                     arduinocommunitysrilanka@gmail.com <br /><br />
                                     Last Edited on 08-03-2023
                                 </div>
-                            </div> */}
+                            </div>
                         </p>
                     </div>
 
