@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion as m } from "framer-motion";
 import db from "../../utils/firebase-config";
 import {
@@ -573,7 +573,7 @@ function Register({ }: Props) {
               <h1 className="text-center text-4xl text-70 font-medium">User Already Registered!</h1>
               <p className="text-center text-sm text-30 font-medium">{email} is already in use  </p>
               <div>
-                  <button onClick={() => {window.location.reload(true)}} className="btn-1 mt-10">Register Again</button>
+                <button onClick={() => { window.location.reload(true) }} className="btn-1 mt-10">Register Again</button>
               </div>
             </div>
           )}

@@ -55,12 +55,12 @@ const Speakers = ({ }: Props) => {
               </p>
             </div>
             <div className="md:order-5">
-              <img src="/img1.png" alt="My Image" className={style.image} />
+              <img src="/ushan.jpg" alt="My Image" className={ `${style.image}`} />
             </div>
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-6">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Wasath Theekshana
+                  Ushan Chandima
                 </div>
                 <div className={style.infoCardDesc}>
                   Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
