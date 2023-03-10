@@ -60,7 +60,7 @@ const Speakers = ({ }: Props) => {
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-6">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Ushan Chandima
+                  Ushan Chamindha
                 </div>
                 <div className={style.infoCardDesc}>
                 Connecting the Unconnected: The Wonders of the Internet of Things - In this speech, we will explore the fascinating world of IoT and discuss how it connects people, places, and things like never before.
@@ -94,7 +94,7 @@ const Speakers = ({ }: Props) => {
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-10 lg:order-9">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Comeing Soon 
+                  Comming Soon 
                 </div>
                 <div className={style.infoCardDesc}>
                 Bridging the Digital and Physical Worlds: Front End Development for Arduino Products - In this speech, we will explore how front end development can be used to create intuitive and engaging user interfaces for Arduino products, bridging the gap between the digital and physical worlds.
