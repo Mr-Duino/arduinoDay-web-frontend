@@ -319,11 +319,11 @@ function Register({ }: Props) {
                     <h4 className={style.formLableStyle}>
                       Are you participating in the Hackathon ?
                     </h4>
-                    <h5 className="text-30 font-normal text-sm">
+                    {/* <h5 className="text-30 font-normal text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       Ut enim ad minim veniam.
-                    </h5>
+                    </h5> */}
                     <div className="flex flex-row gap-5 mt-2">
                       <div>
                         <input
