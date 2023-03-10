@@ -20,7 +20,17 @@ function DayOneRegulations({ }: Props) {
           <div className='sm:text-right '>
             <p className='space-y-5'>
               <div className='text-3xl sm:text-4xl text-30 font-semibold'>*Rules & Regulations</div>
-              <div className='text-80 sm:text-lg leading-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+              <div className='text-80 sm:text-lg leading-5'>* All contestants must arrive on time.
+
+                                                            * A group can have only three members.
+
+                                                            * School children should be of the relevant age group.
+
+                                                            * Participating university students must bring their university ID card.
+
+                                                            * The hardware components we provide should be used with caution.
+
+                                                            * Must attend after registering. (This is not applicable for emergency reasons)</div>
             </p>
           </div>
         </div>
