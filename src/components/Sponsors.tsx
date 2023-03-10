@@ -12,7 +12,7 @@ const Sponsors = ({}: Props) => {
     <div>
       <section id='sponsors' className="bg-white py-16">
         <h1 className="text-4xl font-bold text-70 text-center mx-auto uppercase">Sponsors</h1>
-        <p className="text-80/60 text-center mx-auto text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p className="text-80/60 text-center mx-auto text-sm">Thank you to all our sponsors for their generous support!</p>
         <div className="max-w-screen-xl px-4 mx-auto">
           <div
               className="grid grid-cols-1 gap-16 text-gray-500 py-16 sm:gap-12 lg:grid-cols-6 dark:text-gray-400">

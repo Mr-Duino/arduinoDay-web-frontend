@@ -57,7 +57,7 @@ export default function BasicTabs() {
 
       <div>
         <h1 className='uppercase text-4xl font-semibold text-80 px-3'>Agenda</h1>
-        <p className='font-normal text-[#0e0e0e8a] px-3'>Lorem ipsum dolor sit amet consectetur </p>
+        <p className='font-normal text-[#0e0e0e8a] px-3'>We are conducting this program for two days.</p>
         <img src="/agendaImg.png" alt="agenda-image" className='px-3 mb-10 mt-7 lg:mt-[15rem]' />
       </div>
 
