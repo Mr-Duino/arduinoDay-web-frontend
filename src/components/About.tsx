@@ -43,11 +43,12 @@ function About({ }: Props) {
                 className="flex flex-col gap-5 justify-center lg:w-[45rem] md:w-[31.6rem] rounded-lg bg-30 px-10 pt-5 pb-9">
                 <h5
                   className="mb-2 text-xl font-medium text-white">
-                  Lorem ipsum dolor sit amet consectetur <br /> adipiscing elit.
+                  Are you ready to unlock your creativity? <br /> adipiscing elit.
                 </h5>
                 <p className="mb-0 text-white font-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                Arduino Day 2023 is just around the corner and we at arduino community srilanka are excited to bring you some 
+                creative content to celebrate!  Register for hackathons, educational seminars and inspiration to help you explore 
+                the endless possibilities of this amazing platform.
                 </p>
 
                 <Link to={'/register'}>

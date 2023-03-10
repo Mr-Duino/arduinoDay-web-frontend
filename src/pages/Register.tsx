@@ -145,10 +145,10 @@ function Register({ }: Props) {
               </h1>
 
               <p className="text-80 text-sm font-medium my-4 ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor.
+                LFirst day, Hackathon challenge will be held for the participants. 
+                The second day will include educational seminars on Aurdino and speakers
+                 by experts in the field.  At the end of Arduino day 2023, the winners of 
+                 the hackathon challenge will be given gifts.    
               </p>
 
               {/* <button className='btn-1'>Let's Register</button> */}
@@ -288,9 +288,7 @@ function Register({ }: Props) {
                     What is the date you are willing to participate
                   </h4>
                   <h5 className="text-30 font-normal text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam.
+                  If you intend to participate in this event, please indicate when you will be participating.
                   </h5>
                   <div className="flex flex-row gap-5 mt-2">
                     <div>
