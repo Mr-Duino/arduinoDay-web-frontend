@@ -197,7 +197,7 @@ function Register({ }: Props) {
         >
 
           <div>
-            <h3 className="text-30 text-md font-medium"><span className="text-70 font-bold">*</span>If you are participating to the Arduino Day, please Read More about <span className="text-70 underline cursor-pointer"> <Link to={'/dayone-regulations'}>Day 1</Link></span> Rules & Regulations & Read more about <span className="text-70 underline cursor-pointer"><Link to={'/daytwo-regulations'}>Day 2</Link></span> agenda & regulations.</h3>
+            <h3 className="text-30 text-md font-medium"><span className="text-70 font-bold">*</span>If you are participating to the Arduino Day, please Read More about <span className="text-70 underline cursor-pointer"> <Link to={'/dayone-regulations'}>Day 1</Link></span> Rules & Regulations.</h3>
           </div>
 
           <hr />
@@ -319,11 +319,11 @@ function Register({ }: Props) {
                     <h4 className={style.formLableStyle}>
                       Are you participating in the Hackathon ?
                     </h4>
-                    <h5 className="text-30 font-normal text-sm">
+                    {/* <h5 className="text-30 font-normal text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       Ut enim ad minim veniam.
-                    </h5>
+                    </h5> */}
                     <div className="flex flex-row gap-5 mt-2">
                       <div>
                         <input
