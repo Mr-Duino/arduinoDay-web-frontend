@@ -18,7 +18,7 @@ const Speakers = ({ }: Props) => {
           SPEAKERS
         </p>
         <p className="text-base text-80/60">
-        Behold, the orators for the program of the second day.
+          Behold, the orators for the program of the second day.
         </p>
         <div className=''>
           <div id="speakersGrid" className="mt-10 mb-24 grid gap-3 md:grid-cols-2 lg:grid-cols-4 ">
@@ -31,7 +31,7 @@ const Speakers = ({ }: Props) => {
                   Dileepa Jayawardena
                 </div>
                 <div className={style.infoCardDesc}>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+                Unlocking the Potential of Tomorrow's Technology with Arduino - In this speech, we will explore how Arduino is enabling us to unlock the potential of emerging technologies such as artificial intelligence, robotics, and virtual reality, and how we can use these tools to create a better future.
                 </div>
                 <div className={style.infoCardPost}>
                   Co-founder at myhub.lk
@@ -47,15 +47,15 @@ const Speakers = ({ }: Props) => {
                   Migara Amithodhana
                 </div>
                 <div className={style.infoCardDesc}>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+                The Cloud Revolution: Disrupting Traditional Computing and Driving Innovation - This speech will showcase how cloud computing is revolutionizing the world of computing, from the rise of software-as-a-service (SaaS) to the proliferation of cloud-native applications and infrastructure.
                 </div>
                 <div className={style.infoCardPost}>
-                  Full Stack Developer at LSEG
+                  CEO of Magic Bit
                 </div>
               </p>
             </div>
             <div className="md:order-5">
-              <img src="/ushan.jpg" alt="My Image" className={ `${style.image}`} />
+              <img src="/ushan.jpg" alt="My Image" className={`${style.image}`} />
             </div>
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-6">
               <p className={style.infoCardText}>
@@ -63,10 +63,10 @@ const Speakers = ({ }: Props) => {
                   Ushan Chandima
                 </div>
                 <div className={style.infoCardDesc}>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+                Connecting the Unconnected: The Wonders of the Internet of Things - In this speech, we will explore the fascinating world of IoT and discuss how it connects people, places, and things like never before.
                 </div>
                 <div className={style.infoCardPost}>
-                  Full Stack Developer at LSEG
+                  CEO of Gavesha
                 </div>
               </p>
             </div>
@@ -76,13 +76,13 @@ const Speakers = ({ }: Props) => {
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-7">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Wasath Theekshana
+                  Chanux Bro
                 </div>
                 <div className={style.infoCardDesc}>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+                The Power of Storytelling: How to Craft a Compelling Product Narrative - This speech will showcase the importance of storytelling in product marketing, providing tips and tricks for crafting a compelling product narrative that resonates with customers.
                 </div>
                 <div className={style.infoCardPost}>
-                  Full Stack Developer at LSEG
+                  YouThuber 
                 </div>
               </p>
             </div>
@@ -92,14 +92,16 @@ const Speakers = ({ }: Props) => {
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-10 lg:order-9">
               <p className={style.infoCardText}>
                 <div className={style.infoCardName}>
-                  Wasath Theekshana
+                  Comeing Soon 
                 </div>
                 <div className={style.infoCardDesc}>
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.
+                Bridging the Digital and Physical Worlds: Front End Development for Arduino Products - In this speech, we will explore how front end development can be used to create intuitive and engaging user interfaces for Arduino products, bridging the gap between the digital and physical worlds.
+
                 </div>
-                <div className={style.infoCardPost}>
-                  Full Stack Developer at LSEG
-                </div>
+                
+                {/* <div className={style.infoCardPost}>
+                  
+                </div> */}
               </p>
             </div>
           </div>

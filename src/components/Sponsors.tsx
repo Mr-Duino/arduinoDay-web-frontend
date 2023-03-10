@@ -142,10 +142,10 @@ const Sponsors = ({}: Props) => {
               </svg>
             </a>
           </div>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button className="btn-3">Become a Sponsor
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
