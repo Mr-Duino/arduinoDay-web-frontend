@@ -13,14 +13,14 @@ const Sponsors = ({ }: Props) => {
       <section id='sponsors' className="bg-white py-16">
         <h1 className="text-4xl font-bold text-70 text-center mx-auto uppercase">Sponsors</h1>
         <p className="text-80/60 text-center mx-auto text-sm">Thank you to all our sponsors for their generous support!</p>
-        <div className="max-w-screen-xl px-4 mx-auto">
+        <div className="max-w-screen-xl px-4 mx-auto justify-center mt-10">
           <div
-            className="grid grid-cols-1 text-gray-500 py-16 sm:gap-12 lg:grid-cols-2 dark:text-gray-400">
-            <a href="#" className='flex justify-end'>
-              <img src="/Gavesha logo.png" alt="logo1" className='grayscale hover:grayscale-0 w-[20%]' />
+            className="flex flex-col text-center gap-8 lg:flex lg:flex-row lg:gap-0">
+            <a href="#" className='w-[100%]'>
+              <img src="/Gavesha logo.png" alt="logo1" className='grayscale hover:grayscale-0 w-[20%] mx-auto lg:mr-[20%]' />
             </a>
-            <a href="#" className='flex justify-start'>
-              <img src="/xudder.png" alt="logo1" className='grayscale hover:grayscale-0 w-[40%]' />
+            <a href="#" className='w-[100%]'>
+              <img src="/xudder.png" alt="logo1" className='grayscale hover:grayscale-0 w-[40%] mx-auto lg:mt-11 lg:ml-[7%]' />
             </a>
             {/* <a href="#" className={styles.sponsorLogo}>
               <svg className="h-8 hover:text-80" viewBox="0 0 151 34" fill="currentColor"
