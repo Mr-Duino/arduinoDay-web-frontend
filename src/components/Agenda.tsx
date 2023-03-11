@@ -241,7 +241,7 @@ export default function BasicTabs() {
                   {/* row-7 */}
                   <div className={style.agendarowStyle}>
                     <div className={style.lgDescriptionStyle}>
-                      <h1 className={style.agendaDescriptionStyle}>Star to the Judge</h1>
+                      <h1 className={style.agendaDescriptionStyle}>Start to the Judge</h1>
                     </div>
                   </div>
                   {/* row-7 */}
