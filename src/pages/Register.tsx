@@ -377,7 +377,7 @@ function Register({ }: Props) {
                     </div>
 
                     <div>
-                      <h4 className={style.formLableStyle}>Email (Member 1)</h4>
+                      <h4 className={style.formLableStyle}>Email (Member 2)</h4>
                       <input
                         className={style.formFieldStyle}
                         type="email"
@@ -390,7 +390,7 @@ function Register({ }: Props) {
                     <div className="grid grid-cols-1 gap-4">
                       <div>
                         <h4 className={style.formLableStyle}>
-                          Student/Undergraduate (Member 1)
+                          Student/Undergraduate (Member 2)
                         </h4>
                         <div className="flex flex-row gap-5 mt-2 mb-5">
                           <div>
@@ -423,7 +423,7 @@ function Register({ }: Props) {
                       </div>
                       <div>
                         <h4 className={style.formLableStyle}>
-                          School/University Name (Member 1)
+                          School/University Name (Member 2)
                         </h4>
                         <input
                           className={style.formFieldStyle}
@@ -437,7 +437,7 @@ function Register({ }: Props) {
 
                     <div>
                       <h4 className={style.formLableStyle}>
-                        Phone Number (Member 1)
+                        Phone Number (Member 2)
                       </h4>
                       <input
                         className={style.formFieldStyle}
@@ -451,7 +451,7 @@ function Register({ }: Props) {
                     <hr />
 
                     <div>
-                      <h4 className={style.formLableStyle}>Full Name (Member 2)</h4>
+                      <h4 className={style.formLableStyle}>Full Name (Member 3)</h4>
                       <input
                         className={style.formFieldStyle}
                         type="text"
@@ -462,7 +462,7 @@ function Register({ }: Props) {
                     </div>
 
                     <div>
-                      <h4 className={style.formLableStyle}>Email (Member 2)</h4>
+                      <h4 className={style.formLableStyle}>Email (Member 3)</h4>
                       <input
                         className={style.formFieldStyle}
                         type="email"
@@ -475,7 +475,7 @@ function Register({ }: Props) {
                     <div className="grid grid-cols-1 gap-4">
                       <div>
                         <h4 className={style.formLableStyle}>
-                          Student/Undergraduate (Member 2)
+                          Student/Undergraduate (Member 3)
                         </h4>
                         <div className="flex flex-row gap-5 mt-2 mb-5">
                           <div>
@@ -508,7 +508,7 @@ function Register({ }: Props) {
                       </div>
                       <div>
                         <h4 className={style.formLableStyle}>
-                          School/University Name (Member 2)
+                          School/University Name (Member 3)
                         </h4>
                         <input
                           className={style.formFieldStyle}
@@ -522,7 +522,7 @@ function Register({ }: Props) {
 
                     <div>
                       <h4 className={style.formLableStyle}>
-                        Phone Number (Member 2)
+                        Phone Number (Member 3)
                       </h4>
                       <input
                         className={style.formFieldStyle}
