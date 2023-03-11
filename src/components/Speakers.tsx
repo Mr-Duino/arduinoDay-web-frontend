@@ -89,7 +89,7 @@ const Speakers = ({ }: Props) => {
             </div>
 
             <div className="md:order-9 lg:order-10">
-              <img src="/img1.png" alt="My Image" className={style.image} />
+              <img src="/dummy.jpg" alt="My Image" className={style.image} />
             </div>
             <div className="border-2 border-30 rounded-md px-6 h-[200px] md:h-[100%] grid place-items-center md:order-10 lg:order-9">
               <p className={style.infoCardText}>
