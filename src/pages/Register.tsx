@@ -341,7 +341,8 @@ function Register({ }: Props) {
                 {day1 && (
                   <div>
                     <h4 className={style.formLableStyle}>
-                      ඔබගේ දැනුම වැඩි කර ගැනීමට challenges  වලට face කරමින් ජීවිතයට අලුත් අත්දැකීමක් ලබා ගන්න ඒ වගේම  ත්‍යාග ලබා ගන්න ඔබට මේ Hackathon එක මහඟු තෝතැන්නක් වීම නොඅනුමානයි
+                    ඔබ සතු Arduino දැනුම වැඩි දියුණු කර ගන්න, ඒ දැනුම භාවිතා කරලා ප්‍රශ්ණ විසදන්න, කෝඩ් ලියන්න, රොබෝලා හදන්න වගේ අලුත් ම අලුත් අත්දැකීමක් රාශියක් සමඟ ත්‍යාග සහතික ලබා ගන්න ඔබට මේ Hackathon එක අගනා අවස්තාවක්! ඒ නිසා අනිවාර්යයේම එන්න... <br /><br />
+                    අපි එදාට ඔයාලට Arduino උපකරණත් දෙනවා
                     </h4>
                     {/* <h5 className="text-30 font-normal text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -578,13 +579,15 @@ function Register({ }: Props) {
 
 
 
-
+                      <div className="text-30 font-medium text-md mx-auto mt-5 text-center">
+                      මේ ෆෝරම් එකේ දාන්න ප්‍රශ්න තියෙනවා නම් 0714118736 දුරකථන අංකයට කෝල් එකක් දෙන්න. <br /> අපි කැමතියි ඔයාලට උදව් කරන්න!
+                      </div>
 
                   </div>
                 )}
               </div>
 
-              <div className="flex items-center justify-center mt-10">
+              <div className="flex items-center justify-center mt-6">
                 <div className="mb-12">
                   <MoonLoader
                     color={"#00676B"}
