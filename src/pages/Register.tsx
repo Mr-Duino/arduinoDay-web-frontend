@@ -61,49 +61,56 @@ function Register({ }: Props) {
 
   const onSubmitHandler = async (event: any) => {
     event.preventDefault();
-    setLoading(true);
-    const docData = 
-    {
-      FullName: fname,
-      Email: email,
-      University_or_School: uniorscl,
-      Education_center_Name: eduName,
-      Phone: phone,
-      Attends: {
-        Day_One: day1,
-        Day_Two: day2,
-      },
-      Hackthon: hackthon,
-      TeamName: teamName,
-      Member_One: {
-        FullName: m1fname,
-        Email: m1email,
-        University_or_School: m1uniorscl,
-        Education_center_Name: eduM1Name,
-        Phone: m1phone,
-      },
-      Member_Two: {
-        FullName: m2fname,
-        Email: m2email,
-        University_or_School: m2uniorscl,
-        Education_center_Name: eduM2Name,
-        Phone: m2phone,
-      },
-    };
+    if (day1 || day2) {
 
-    const docRef = doc(db, "Arduino_Day_Registration", email);
-    const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) {
-      setExists(true);
-    } else {
-      console.log("No such document!");
-      await setDoc(doc(db, "Arduino_Day_Registration", email), docData);
-      setFormSubmitted(true);
-      setLoading(false);
+      setLoading(true);
+      const docData =
+      {
+        FullName: fname,
+        Email: email,
+        University_or_School: uniorscl,
+        Education_center_Name: eduName,
+        Phone: phone,
+        Attends: {
+          Day_One: day1,
+          Day_Two: day2,
+        },
+        Hackthon: hackthon,
+        TeamName: teamName,
+        Member_One: {
+          FullName: m1fname,
+          Email: m1email,
+          University_or_School: m1uniorscl,
+          Education_center_Name: eduM1Name,
+          Phone: m1phone,
+        },
+        Member_Two: {
+          FullName: m2fname,
+          Email: m2email,
+          University_or_School: m2uniorscl,
+          Education_center_Name: eduM2Name,
+          Phone: m2phone,
+        },
+      };
+
+      const docRef = doc(db, "Arduino_Day_Registration", email);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        setExists(true);
+      } else {
+        console.log("No such document!");
+        await setDoc(doc(db, "Arduino_Day_Registration", email), docData);
+        setFormSubmitted(true);
+        setLoading(false);
+      }
+
+    }
+    else {
+      alert("Please select atleast a day")
     }
 
-    console.log(docData);
   };
 
   const style = {
@@ -225,6 +232,7 @@ function Register({ }: Props) {
                           type="radio"
                           id="student-radio"
                           name="status"
+                          required
                           value="Student"
                           checked={uniorscl === "Student"}
                           onChange={(event) => onOptionChangeEdu(event)}
@@ -238,6 +246,7 @@ function Register({ }: Props) {
                           type="radio"
                           id="undergraduate-radio"
                           name="status"
+                          required
                           value="Undergraduate"
                           checked={uniorscl === "Undergraduate"}
                           onChange={(event) => onOptionChangeEdu(event)}
@@ -273,7 +282,7 @@ function Register({ }: Props) {
                 </div>
 
                 <div>
-                  <h4 className={style.formLableStyle}>Phone Number</h4>
+                  <h4 className={style.formLableStyle}>WhatsApp Number</h4>
                   <input
                     className={style.formFieldStyle}
                     type="text"
@@ -300,10 +309,10 @@ function Register({ }: Props) {
                 <div>
                   <h4 className={style.formLableStyle}>
                     What is the date you are willing to participate
+
                   </h4>
                   <h5 className="text-30 font-normal text-sm">
-                    If you intend to participate in this event, please indicate
-                    when you will be participating.
+                    ඔබ සහභාගී වීමට කැමති දිනය කුමක්ද ?
                   </h5>
                   <div className="flex flex-row gap-5 mt-2">
                     <div>
@@ -314,7 +323,7 @@ function Register({ }: Props) {
                         checked={day1}
                         onChange={(e) => setDayFunction(e.target.checked)}
                       />{" "}
-                      <span className="text-30 font-medium text-md">Day 1</span>
+                      <span className="text-30 font-medium text-md">Day 1 - Hackathon</span>
                     </div>
                     <div>
                       <input
@@ -324,16 +333,16 @@ function Register({ }: Props) {
                         checked={day2}
                         onChange={(e) => setDay2(e.target.checked)}
                       />{" "}
-                      <span className="text-30 font-medium text-md">Day 2</span>
+                      <span className="text-30 font-medium text-md">Day 2 - Main Event</span>
                     </div>
                   </div>
                 </div>
 
                 {day1 && (
                   <div>
-                    {/* <h4 className={style.formLableStyle}>
-                      Are you participating in the Hackathon ?
-                    </h4> */}
+                    <h4 className={style.formLableStyle}>
+                      ඔබගේ දැනුම වැඩි කර ගැනීමට challenges  වලට face කරමින් ජීවිතයට අලුත් අත්දැකීමක් ලබා ගන්න ඒ වගේම  ත්‍යාග ලබා ගන්න ඔබට මේ Hackathon එක මහඟු තෝතැන්නක් වීම නොඅනුමානයි
+                    </h4>
                     {/* <h5 className="text-30 font-normal text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                       do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -372,7 +381,7 @@ function Register({ }: Props) {
                     <div>
                       <h4 className={style.formLableStyle}>Team Name</h4>
                       <input
-                        className={style.formFieldStyle}
+                        className={`${style.formFieldStyle} mb-10 md:mb-0`}
                         type="text"
                         value={teamName}
                         onChange={(e) => setTeamName(e.target.value)}
@@ -381,6 +390,8 @@ function Register({ }: Props) {
 
 
                       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-6 md:mt-10">
+
+
                         <div className="grid grid-cols-1 gap-5">
                           <div>
                             <h4 className={style.formLableStyle}>
@@ -408,38 +419,40 @@ function Register({ }: Props) {
 
                           <div className="grid grid-cols-1 gap-4">
                             {/* <div>
-                        <h4 className={style.formLableStyle}>
-                          Student/Undergraduate (Member 2)
-                        </h4>
-                        <div className="flex flex-row gap-5 mt-2 mb-5">
-                          <div>
-                            <input
+                              <h4 className={style.formLableStyle}>
+                              Student/Undergraduate (Member 2)
+                              </h4>
+                              <div className="flex flex-row gap-5 mt-2 mb-5">
+                              <div>
+                              <input
                               type="radio"
                               id="student-radio"
                               name="status"
-                              value="Student"
-                              checked={m1uniorscl === "Student"}
-                              onChange={(event) => onOptionChangeEduM1(event)}
-                            />{" "}
-                            <span className="text-30 font-medium text-md">
-                              Student
-                            </span>
-                          </div>
-                          <div>
-                            <input
-                              type="radio"
-                              id="undergraduate-radio"
-                              name="status"
-                              value="Undergraduate"
-                              checked={m1uniorscl === "Undergraduate"}
-                              onChange={(event) => onOptionChangeEduM1(event)}
-                            />{" "}
-                            <span className="text-30 font-medium text-md">
-                              Undergraduate
-                            </span>
-                          </div>
-                        </div>
-                      </div> */}
+                                    value="Student"
+                                    checked={m1uniorscl === "Student"}
+                                    onChange={(event) => onOptionChangeEduM1(event)}
+                                    />{" "}
+                                    <span className="text-30 font-medium text-md">
+                                    Student
+                                    </span>
+                                    </div>
+                                    <div>
+                                    <input
+                                    type="radio"
+                                    id="undergraduate-radio"
+                                    name="status"
+                                    value="Undergraduate"
+                                    checked={m1uniorscl === "Undergraduate"}
+                                    onChange={(event) => onOptionChangeEduM1(event)}
+                                    />{" "}
+                                    <span className="text-30 font-medium text-md">
+                                    Undergraduate
+                                  </span>
+                                  </div>
+                              </div>
+                            </div> */}
+
+
 
                             <div>
                               <h4 className={style.formLableStyle}>
@@ -457,7 +470,7 @@ function Register({ }: Props) {
 
                           <div>
                             <h4 className={style.formLableStyle}>
-                              Phone Number (Member 2)
+                              WhatsApp Number (Member 2)
                             </h4>
                             <input
                               className={style.formFieldStyle}
@@ -467,15 +480,16 @@ function Register({ }: Props) {
                               required
                             />
                           </div>
+
                         </div>
 
-                        <hr className="md:hidden"/>
+
+                        <hr className="md:hidden" />
 
                         <div className="grid grid-cols-1 gap-5">
+
                           <div>
-                            <h4 className={style.formLableStyle}>
-                              Full Name (Member 3)
-                            </h4>
+                            <h4 className={style.formLableStyle}>Full Name (Member 3)</h4>
                             <input
                               className={style.formFieldStyle}
                               type="text"
@@ -498,38 +512,38 @@ function Register({ }: Props) {
 
                           <div className="grid grid-cols-1 gap-4">
                             {/* <div>
-                        <h4 className={style.formLableStyle}>
-                          Student/Undergraduate (Member 3)
-                        </h4>
-                        <div className="flex flex-row gap-5 mt-2 mb-5">
-                          <div>
-                            <input
+                              <h4 className={style.formLableStyle}>
+                              Student/Undergraduate (Member 3)
+                              </h4>
+                              <div className="flex flex-row gap-5 mt-2 mb-5">
+                              <div>
+                              <input
                               type="radio"
                               id="student-radio"
                               name="status"
                               value="Student"
                               checked={m2uniorscl === "Student"}
-                              onChange={(event) => onOptionChangeEduM2(event)}
-                            />{" "}
-                            <span className="text-30 font-medium text-md">
-                              Student
-                            </span>
-                          </div>
-                          <div>
-                            <input
-                              type="radio"
-                              id="undergraduate-radio"
-                              name="status"
-                              value="Undergraduate"
-                              checked={m2uniorscl === "Undergraduate"}
-                              onChange={(event) => onOptionChangeEduM2(event)}
-                            />{" "}
-                            <span className="text-30 font-medium text-md">
-                              Undergraduate
-                            </span>
-                          </div>
-                        </div>
-                      </div> */}
+                                    onChange={(event) => onOptionChangeEduM2(event)}
+                                    />{" "}
+                                  <span className="text-30 font-medium text-md">
+                                    Student
+                                    </span>
+                                    </div>
+                                    <div>
+                                  <input
+                                  type="radio"
+                                  id="undergraduate-radio"
+                                  name="status"
+                                  value="Undergraduate"
+                                  checked={m2uniorscl === "Undergraduate"}
+                                    onChange={(event) => onOptionChangeEduM2(event)}
+                                    />{" "}
+                                  <span className="text-30 font-medium text-md">
+                                  Undergraduate
+                                  </span>
+                                </div>
+                                </div>
+                              </div> */}
                             <div>
                               <h4 className={style.formLableStyle}>
                                 School/University Name (Member 3)
@@ -546,7 +560,7 @@ function Register({ }: Props) {
 
                           <div>
                             <h4 className={style.formLableStyle}>
-                              Phone Number (Member 3)
+                              WhatsApp Number (Member 3)
                             </h4>
                             <input
                               className={style.formFieldStyle}
@@ -558,6 +572,7 @@ function Register({ }: Props) {
                           </div>
                         </div>
                       </div>
+
                     </div>
 
 
