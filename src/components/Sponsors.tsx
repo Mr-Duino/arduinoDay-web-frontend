@@ -22,6 +22,11 @@ const Sponsors = ({ }: Props) => {
             <a href="#" className='w-[100%]'>
               <img src="/xudder.png" alt="logo1" className='grayscale hover:grayscale-0 w-[40%] mx-auto lg:mt-11 lg:ml-[7%]' />
             </a>
+
+            <a href="#" className='w-[100%]'>
+              <img src="/Asset 4@4x.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:mt-11 lg:ml-[7%]' />
+            </a>
+
             {/* <a href="#" className={styles.sponsorLogo}>
               <svg className="h-8 hover:text-80" viewBox="0 0 151 34" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
