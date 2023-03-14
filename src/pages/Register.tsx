@@ -73,7 +73,7 @@ function Register({ }: Props) {
         Education_center_Name: eduName,
         Phone: phone,
         Attends: {
-          Day_One: day1,
+          Day_One: false,
           Day_Two: day2,
         },
         Hackthon: hackthon,
@@ -122,7 +122,7 @@ function Register({ }: Props) {
   const setDayFunction = (value) => {
     setDay1(value);
     // onOptionChange("Yes");
-    setHackthon("Yes");
+    setHackthon("No");
   }
 
   return (
@@ -341,8 +341,11 @@ function Register({ }: Props) {
                 {day1 && (
                   <div>
                     <h4 className={style.formLableStyle}>
-                    ඔබ සතු Arduino දැනුම වැඩි දියුණු කර ගන්න, ඒ දැනුම භාවිතා කරලා ප්‍රශ්ණ විසදන්න, කෝඩ් ලියන්න, රොබෝලා හදන්න වගේ අලුත් ම අලුත් අත්දැකීමක් රාශියක් සමඟ ත්‍යාග සහතික ලබා ගන්න ඔබට මේ Hackathon එක අගනා අවස්තාවක්! ඒ නිසා අනිවාර්යයේම එන්න... <br /><br />
-                    අපි එදාට ඔයාලට Arduino උපකරණත් දෙනවා
+                    2023 Arduino Day Hackathon Event එක සදහා බලපොරොත්තු වු කණ්ඩායම් ප්‍රමාණය දැනටමත් 
+                    ඉක්මවා ඇති බැවින් Hackthon තරගාවලියේ Registration කටයුතු නවත්වා ඇති බව කණගාටුවෙන් දැනුම් දී සිටිමු.<br/> <br/> 
+                    නමුත් Exhibition සහා Knowledge Sharing (Day two) Event එක සදහා තවමත් ඔබට සහභාගිවීමට අවස්ථාවක් ඇති බැවින් ඒ සදහා
+                     Register වන ලෙස කාරුණිකව දන්වා සිටිමු.
+
                     </h4>
                     {/* <h5 className="text-30 font-normal text-sm">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -377,7 +380,7 @@ function Register({ }: Props) {
                 )}
 
                 <hr />
-                {day1 && (
+                {day1 && false && (
                   <div className="grid grid-cols-1 gap-4">
                     <div>
                       <h4 className={style.formLableStyle}>Team Name</h4>
