@@ -24,7 +24,7 @@ const Sponsors = ({ }: Props) => {
             </a>
 
             <a href="#" className='w-[100%]'>
-              <img src="/Asset 4@4x.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:mt-11 lg:ml-[7%]' />
+              <img src="/Asset 4@4x.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:ml-[7%]' />
             </a>
 
             {/* <a href="#" className={styles.sponsorLogo}>
