@@ -115,12 +115,12 @@ const Nav = () => {
             </li>
             <li>
               <a
-                href="#ourTeam"
-                onClick={() => setActiveNav("#ourTeam")}
-                className={`${path.pathMethod} ${activeNav === "#ourTeam" ? "text-70" : ""
+                href="#swag"
+                onClick={() => setActiveNav("#swag")}
+                className={`${path.pathMethod} ${activeNav === "#swag" ? "text-70" : ""
                   }`}
               >
-                Our Team
+                Shop 
               </a>
             </li>
             <li>
