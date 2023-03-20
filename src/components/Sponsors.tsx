@@ -20,7 +20,7 @@ const Sponsors = ({ }: Props) => {
               <img src="/Gavesha logo.png" alt="logo1" className='grayscale hover:grayscale-0 w-[20%] mx-auto lg:mr-[20%]' />
             </a>
             <a href="#" className='w-[100%]'>
-              <img src="/xudder.png" alt="logo1" className='grayscale hover:grayscale-0 w-[6s0%] mx-auto lg:mt-11 lg:ml-[7%]' />
+              <img src="/xudder.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:mt-11 lg:ml-[7%]' />
             </a>
 
             <a href="#" className='w-[100%]'>
