@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 type Props = {}
 
@@ -28,7 +28,7 @@ const Sponsors = ({ }: Props) => {
             </a>
 
             <a href="#" className='w-[100%]'>
-              <img src="/Magicbit Logo High Resolution.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:mt -1 lg:ml-[7%]' />
+              <img src="/Magicbit Logo High Resolution.png" alt="logo1" className='grayscale hover:grayscale-0 w-[60%] mx-auto lg:mt-[-3.3rem] lg:ml-[7%] ' />
             </a>
 
             {/* <a href="#" className={styles.sponsorLogo}>
