@@ -12,10 +12,15 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     const currentTime = new Date().getTime();
     const difference = targetDate.getTime() - currentTime;
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+      // days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      // hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      // minutes: Math.floor((difference / 1000 / 60) % 60),
+      // seconds: Math.floor((difference / 1000) % 60),
+
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
     };
   }
 
